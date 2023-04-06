@@ -2,7 +2,11 @@ html {
     font-family: sans-serif;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent
+    -webkit-tap-highlight-color: transparent;
+    background-color: black;
+}
+.body-font-color {
+    color: #fff;
 }
 body {
     margin: 50px;
@@ -12,7 +16,7 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff
+    /* background-color: #fff */
 }
 .headline {
     text-transform: uppercase;
@@ -25,6 +29,14 @@ body {
     margin-top: 0;
     margin-bottom: .5rem
 } */
+.v-auto {
+    font-size: 30px;
+    color: #bb23c7;
+}
+.clemson-image {
+    position: absolute;
+    right: 100px;
+}
 p {
     margin-top: 0;
     margin-bottom: 1rem
