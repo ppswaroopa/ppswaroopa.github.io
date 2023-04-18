@@ -213,4 +213,7 @@ footer {
 #about {
     text-align: center;
 }
+.project {
+    padding: 6%;
+} 
 }
