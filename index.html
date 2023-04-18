@@ -2,12 +2,13 @@
 <html lang="en">
     <head>
         <title>Pranava Swaroopa</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
         <meta charset="UTF-8">
         <meta name="description" content="A portfolio webpage">
         <meta name="keywords" content="ppswaroopa, robotics, engineer">
         <meta name="author" content="Pranava Swaroopa">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="src/css/style.css">
+        <script type="text/javascript" src="src/script/script.js"></script>
     </head>
 <body>
 <div id="first-slide">
@@ -27,34 +28,57 @@
     </div>
 
     <div class="info">
-        <h2 id="about">About me</h2>
+        <h2 id="about">About me</h2><img src="src/images/Paw_RGB__Orange.png" />
         <p class="study">Studying M.S. in Automotive Engineering currently at the
-            <b><span id="clemson">Clemson Univerisity</span> International Center for Automotive Research</b> <br>
-            Graduating in August 2023.        
+            <b><span id="clemson">Clemson Univerisity</span> - International Center for Automotive Research</b> <br>
+            Graduating in August 2023.
         </p>
+        
         <hr>
         <h3>Education</h3>
-        <div class="education">
-            <div>2021 - 2023</div>
-            <div class="edu-det">
-                <div><b>Master of Science in Automotive Engineering</b></div>
-                <div>Clemson Univerisity - ICAR</div>
-            </div>
-        </div>
-        <div class="education">
-            <div>2021 - 2023</div>
-            <div class="edu-det">
-                <div><b>Bachelors of Technology in Mechanical Engineering</b></div>
-                <div>Manipal Institute of Technology, India</div>
-            </div>
-        </div>
+        <table>
+            <tr>
+              <td>2021 - 2023</td>
+              <td><div class="edu-det"><b>Master of Science in Automotive Engineering</b></div></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><div class="edu-det">Clemson Univerisity - ICAR</div></td>
+            </tr>
+            <tr>
+              <td>2013 - 2017</td>
+              <td><div class="edu-det"><b>Bachelors of Technology in Mechanical Engineering</b></div></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><div class="edu-det">Manipal Institute of Technology, India</div></td>
+            </tr>
+        </table>
         <hr>
+
         <h3>Technical Skills</h3>
-        <b>Languages:</b> C/C++, Python<br>
-        <b>Tools:</b> Git, ROS, MATLAB, Docker, VS Code, Visual Studio<br>
-        <b>Simulation Environment:</b> Gazebo, LG-SVL, CoppeliaSim, Project Chrono<br>
-        <b>Design Software:</b> SolidWorks, Siemens NX, AutoCAD, CATIA V5<br>
-        <b>OS:</b> Ubuntu, Windows, Raspberry Pi<br>
+        <table>
+            <tr>
+              <td>Languages:</td>
+              <td>C/C++, Python</td>
+            </tr>
+            <tr>
+              <td>Tools:</td>
+              <td>Git, ROS, MATLAB, Docker, Visual Studio</td>
+            </tr>
+            <tr>
+              <td>Simulation Env:</td>
+              <td>Gazebo, LG-SVL, CoppeliaSim, Project Chrono</td>
+            </tr>
+            <tr>
+                <td>Design Software:</td>
+                <td>SolidWorks, Siemens NX, AutoCAD, CATIA V5</td>
+            </tr>
+            <tr>
+                <td>OS:</td>
+                <td>Ubuntu, Windows, Raspberry Pi</td>
+            </tr>
+          </table>
         <div id="resume-button">
             <a href="src/Pranava_Swaroopa.pdf" download>
                 <button>RESUME</button>
@@ -62,7 +86,32 @@
         </div>
     </div>
 </div>
-<!-- <div class="clemson-image"><img src="src/images/ClemsonPaw_RGB__Orange.png" width="300"></div> -->
+
+<h1 id="project">Projects</h1>
+<div id="second-slide">
+
+<div class="project">
+    <a href="https://github.com/ppswaroopa/Lane-Detection-In-Foggy-Weather" target="_blank">
+        <img src="src/images/severe_sq.png">
+        <h3>Drivable Area Detection under Severe Weather</h3>
+    </a>
+</div>
+
+<div class="project">
+    <a href="https://github.com/ppswaroopa/Aue8230Spring2022_Group7/tree/main/group7_ws/src/auefinals" target="_blank">
+        <img src="src/images/auto_bot.gif">
+        <h3>Autonomous Turtlebot</h3>
+    </a>
+</div>
+
+<div class="project">
+    <a href="https://github.com/ppswaroopa/route_planner_ND" target="_blank">
+        <img src="src/images/ND_aStar.png">
+        <h3>A* Route Planner</h3>
+    </a>
+</div>
+
+</div>
 
 </body>
 <footer>
