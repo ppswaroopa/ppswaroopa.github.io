@@ -22,7 +22,7 @@
                 <img src="src/images/github-mark-white.svg" alt="Github Profile Link" width="40px"/>
             </a>
             <a href="https://www.linkedin.com/in/pranavaswaroopa" target="_blank" class="logo">
-                <img src="src/images/In-White-128.png" alt="Github Profile Link" width="40px"/>
+                <img src="src/images/In-White-128.png" alt="LinkedIn Profile Link" width="40px"/>
             </a>
         </div>
     </div>
@@ -90,29 +90,128 @@
 <h1 id="project">Projects</h1>
 <div id="second-slide">
 
-<div class="project">
-    <a href="https://github.com/ppswaroopa/Lane-Detection-In-Foggy-Weather" target="_blank">
+<div class="project" id="sev-wea" onclick="on(1)">
+    <!-- <a href="https://github.com/ppswaroopa/Lane-Detection-In-Foggy-Weather" target="_blank"> -->
         <img src="src/images/severe_sq.png">
         <h3>Drivable Area Detection under Severe Weather</h3>
-    </a>
+    <!-- </a> -->
 </div>
 
-<div class="project">
-    <a href="https://github.com/ppswaroopa/Aue8230Spring2022_Group7/tree/main/group7_ws/src/auefinals" target="_blank">
+<div class="project" id="autobot" onclick="on(2)">
+    <!-- <a href="https://github.com/ppswaroopa/Aue8230Spring2022_Group7/tree/main/group7_ws/src/auefinals" target="_blank"> -->
         <img src="src/images/auto_bot.gif">
         <h3>Autonomous Turtlebot</h3>
-    </a>
+    <!-- </a> -->
 </div>
 
-<div class="project">
-    <a href="https://github.com/ppswaroopa/route_planner_ND" target="_blank">
+<div class="project" id="astar" onclick="on(3)">
+    <!-- <a href="https://github.com/ppswaroopa/route_planner_ND" target="_blank"> -->
         <img src="src/images/ND_aStar.png">
         <h3>A* Route Planner</h3>
-    </a>
+    <!-- </a> -->
+</div>
+
+<div class="project" id="agrawal-lab" onclick="on(4)">
+    <!-- <a href="https://github.com/ppswaroopa/route_planner_ND" target="_blank"> -->
+        <img src="src/images/agrawal-lab.png">
+        <h3>Agrawal Lab</h3>
+    <!-- </a> -->
 </div>
 
 </div>
 
+<div class="project-details" id="sev-wea-det" onclick="off(1)">
+    <div class="project-details-left">
+        <h2>Drivable Area Detection in Severe Weather</h2>
+        <img src="src/images/severe_sq.png">
+    </div>
+    <div class="project-details-right">
+        <h3>Highlights</h3>
+        <ul>
+            <li>Team of 3</li>
+            <li>20 Layer DNN Network</li>
+            <li>Encoder-Decorder configuration</li>
+            <li>15.6K selected images from BDD100K dataset</li>
+            <li>Pipeline developed that can process a given video and recognize and draw drivable area in it</li>
+            <li>Complete project was setup and run in Palmetto HPC, Clemson Univerisity</li>
+        </ul>
+        <a href="https://github.com/ppswaroopa/Lane-Detection-In-Foggy-Weather" target="_blank" style="padding-right: 3%; text-decoration: none;">
+            <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/>
+        </a>
+        <a href="https://youtu.be/N1VKDhaKGTs" target="_blank">
+            <img src="src/images/youtube_social_icon_dark.png" width="55px">
+        </a>
+    </div>
+</div>
+
+<div class="project-details" id="autobot-det" onclick="off(2)">
+    <div class="project-details-left">
+        <h2>Autonomous Turtlebot</h2>
+        <img src="src/images/auto_bot.gif">
+    </div>
+    <div class="project-details-right">
+        <h3>Highlights</h3>
+        <ul>
+            <li>Lead the Team of 4</li>
+            <li>Developed PID controllers to use LIDAR data to keep the robot away from all obstacles and be at the center</li>
+            <li>Using camera images, developed a PID controller to follow a line on the track and used miniYOLO to analyze and
+                respond to a STOP sign.</li>
+            <li>Implemented a cron job to get useful data sent before every test, which resulted in a faster testing schedule.</li>
+            <li>For successfully implementing the project, received the highest grade in the class</li>
+        </ul>
+        <a href="https://github.com/ppswaroopa/Aue8230Spring2022_Group7/tree/main/group7_ws/src/auefinals" target="_blank" style="padding-right: 3%; text-decoration: none;">
+            <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/>
+        </a>
+        <a href="https://youtu.be/YXchdEtqzsE" target="_blank">
+            <img src="src/images/youtube_social_icon_dark.png" width="55px" alt="Project Demo">
+        </a>
+    </div>
+</div>
+
+<div class="project-details" id="astar-det" onclick="off(3)">
+    <div class="project-details-left">
+        <h2>A* Route Planner</h2>
+        <img src="src/images/ND_aStar.png">
+    </div>
+    <div class="project-details-right">
+        <h3>Highlights</h3>
+        <ul>
+            <li>Lead the Team of 4</li>
+            <li>Developed PID controllers to use LIDAR data to keep the robot away from all obstacles and be at the center</li>
+            <li>Using camera images, developed a PID controller to follow a line on the track and used miniYOLO to analyze and
+                respond to a STOP sign.</li>
+            <li>Implemented a cron job to get useful data sent before every test, which resulted in a faster testing schedule.</li>
+            <li>For successfully implementing the project, received the highest grade in the class</li>
+        </ul>
+        <a href="https://github.com/ppswaroopa/route_planner_ND" target="_blank" style="padding-right: 3%; text-decoration: none;">
+            <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/>
+        </a>
+        <!-- <a href="https://youtu.be/YXchdEtqzsE" target="_blank">
+            <img src="src/images/youtube_social_icon_dark.png" width="55px" alt="Project Demo">
+        </a> -->
+    </div>
+</div>
+
+<div class="project-details" id="agrawal-lab-det" onclick="off(4)">
+    <div class="project-details-left">
+        <h2>Agrawal Lab Website Project</h2>
+        <img src="src/images/agrawal-lab.png">
+    </div>
+    <div class="project-details-right">
+        <h3>Highlights</h3>
+        <ul>
+            <li>Website built and hosted with Wix</li>
+            <li>Made in mind with ease of maintenance</li>
+            <li>Visit at <a href="https://www.agrawallab.com/" target="_blank" style="text-decoration: underline; color: inherit;">agrawallab.com</a></li>
+        </ul>
+        <!-- <a href="https://github.com/ppswaroopa/route_planner_ND" target="_blank" style="padding-right: 3%; text-decoration: none;">
+            <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/>
+        </a> -->
+        <!-- <a href="https://youtu.be/YXchdEtqzsE" target="_blank">
+            <img src="src/images/youtube_social_icon_dark.png" width="55px" alt="Project Demo">
+        </a> -->
+    </div>
+</div>
 </body>
 <footer>
     <p>Designed and Developed by Pranava Swaroopa</p>
