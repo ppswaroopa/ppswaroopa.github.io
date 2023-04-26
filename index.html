@@ -3,217 +3,301 @@
     <head>
         <title>Pranava Swaroopa</title>
         <meta charset="UTF-8">
-        <meta name="description" content="A portfolio webpage">
+        <meta name="description" content="Portfolio webpage">
         <meta name="keywords" content="ppswaroopa, robotics, engineer">
         <meta name="author" content="Pranava Swaroopa">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="src/css/style.css">
         <script type="text/javascript" src="src/script/script.js"></script>
+        <script src="https://kit.fontawesome.com/f0de5b417b.js" crossorigin="anonymous"></script>
     </head>
 <body>
-<div id="first-slide">
-    <div id="profile-message">
-        <div id="hello-message">Hi</div>
-        <div class="name">I am Pranava Swaroopa</div>
-        <img id="profile-image" src="src/images/Profile_Image.png" alt="Photo of Pranava Swaroopa">
-        <div class="name">I develop robots that can see, think, and act</div>
-        <div id="external-links">
-            <a href="https://github.com/ppswaroopa" target="_blank" class="logo">
-                <img src="src/images/github-mark-white.svg" alt="Github Profile Link" width="40px"/>
-            </a>
-            <a href="https://www.linkedin.com/in/pranavaswaroopa" target="_blank" class="logo">
-                <img src="src/images/In-White-128.png" alt="LinkedIn Profile Link" width="40px"/>
-            </a>
+    <!-- <script> configObj = {"buttonD":"M11.384 13.333h9.232c.638 0 .958.68.505 1.079l-4.613 4.07c-.28.246-.736.246-1.016 0l-4.613-4.07c-.453-.399-.133-1.079.505-1.079z","buttonT":"translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)","shadowSize":"none","roundnessSize":"12px","buttonDToBottom":"32px","buttonDToRight":"32px","selectedBackgroundColor":"#ffb30b","selectedIconColor":"#626a7e","buttonWidth":"40px","buttonHeight":"40px","svgWidth":"32px","svgHeight":"32px"};function createButton(obj, pageSimulator) {    const body = document.querySelector("body");    backToTopButton = document.createElement("span");    backToTopButton.classList.add("softr-back-to-top-button");    backToTopButton.id = "softr-back-to-top-button";    pageSimulator      ? pageSimulator.appendChild(backToTopButton)      : body.appendChild(backToTopButton);    backToTopButton.style.width = obj.buttonWidth;    backToTopButton.style.height = obj.buttonHeight;    backToTopButton.style.marginRight = obj.buttonDToRight;    backToTopButton.style.marginBottom = obj.buttonDToBottom;    backToTopButton.style.borderRadius = obj.roundnessSize;    backToTopButton.style.boxShadow = obj.shadowSize;    backToTopButton.style.color = obj.selectedBackgroundColor;    backToTopButton.style.backgroundColor = obj.selectedBackgroundColor;    pageSimulator ? backToTopButton.style.position = "absolute" : backToTopButton.style.position = "fixed";    backToTopButton.style.outline = "none";    backToTopButton.style.bottom = "0px";    backToTopButton.style.right = "0px";    backToTopButton.style.cursor = "pointer";    backToTopButton.style.textAlign = "center";    backToTopButton.style.border = "solid 2px currentColor";    backToTopButton.innerHTML =      '<svg class="back-to-top-button-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" > <g fill="none" fill-rule="evenodd"> <path d="M0 0H32V32H0z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> <path class="back-to-top-button-img" fill-rule="nonzero" d="M11.384 13.333h9.232c.638 0 .958.68.505 1.079l-4.613 4.07c-.28.246-.736.246-1.016 0l-4.613-4.07c-.453-.399-.133-1.079.505-1.079z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> </g> </svg>';    backToTopButtonSvg = document.querySelector(".back-to-top-button-svg");    backToTopButtonSvg.style.verticalAlign = "middle";    backToTopButtonSvg.style.margin = "auto";    backToTopButtonSvg.style.justifyContent = "center";    backToTopButtonSvg.style.width = obj.svgWidth;    backToTopButtonSvg.style.height = obj.svgHeight;    backToTopButton.appendChild(backToTopButtonSvg);    backToTopButtonImg = document.querySelector(".back-to-top-button-img");    backToTopButtonImg.style.fill = obj.selectedIconColor;    backToTopButtonSvg.appendChild(backToTopButtonImg);    backToTopButtonImg.setAttribute("d", obj.buttonD);    backToTopButtonImg.setAttribute("transform", obj.buttonT);        if(!pageSimulator) {      backToTopButton.style.display = "none";      window.onscroll = function() {        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {          backToTopButton.style.display = "block";        } else {          backToTopButton.style.display = "none";        }      };        backToTopButton.onclick = function() {        document.body.scrollTop = 0;        document.documentElement.scrollTop = 0;      };    }  };document.addEventListener("DOMContentLoaded", function() { createButton(configObj, null); });</script> -->
+    <div id="first-slide">
+        <div id="profile-message">
+            <div id="hello-message">Hi</div>
+            <div class="name">I am Pranava Swaroopa</div>
+            <img id="profile-image" src="src/images/Profile_Image.png" alt="Photo of Pranava Swaroopa">
+            <div class="name">I develop robots that can see, think, and act</div>
+            <div id="external-links">
+                <a href="https://github.com/ppswaroopa" target="_blank" class="logo">
+                    <!-- <img src="src/images/github-mark-white.svg" alt="Github Profile Link" width="40px"/> -->
+                    <i class="fa-brands fa-github fa-3x" style="color: #ffffff;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/pranavaswaroopa" target="_blank" class="logo">
+                    <!-- <img src="src/images/In-White-128.png" alt="LinkedIn Profile Link" width="40px"/> -->
+                    
+                    <i class="fa-brands fa-linkedin fa-3x" style="color: #fff;"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="info">
+            <h2 id="about">About me</h2><img src="src/images/Paw_RGB__Orange.png" />
+            <p class="study">Studying M.S. in Automotive Engineering currently at the
+                <b><span id="clemson">Clemson Univerisity</span> - International Center for Automotive Research</b> <br>
+                Graduating in August 2023.
+            </p>
+            
+            <hr>
+            <h3>Education</h3>
+            <table>
+                <tr>
+                <td>2021 - 2023</td>
+                <td><div class="edu-det"><b>Master of Science in Automotive Engineering</b></div></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><div class="edu-det">Clemson Univerisity - ICAR</div></td>
+                </tr>
+                <tr>
+                <td>2013 - 2017</td>
+                <td><div class="edu-det"><b>Bachelors of Technology in Mechanical Engineering</b></div></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><div class="edu-det">Manipal Institute of Technology, India</div></td>
+                </tr>
+            </table>
+            <hr>
+
+            <h3>Technical Skills</h3>
+            <table>
+                <tr>
+                <td>Languages:</td>
+                <td>C/C++, Python</td>
+                </tr>
+                <tr>
+                <td>Tools:</td>
+                <td>Git, ROS, MATLAB, Docker, Visual Studio</td>
+                </tr>
+                <tr>
+                <td>Simulation Env:</td>
+                <td>Gazebo, LG-SVL, CoppeliaSim, Project Chrono</td>
+                </tr>
+                <tr>
+                    <td>Design Software:</td>
+                    <td>SolidWorks, Siemens NX, AutoCAD, CATIA V5</td>
+                </tr>
+                <tr>
+                    <td>OS:</td>
+                    <td>Ubuntu, Windows, Raspberry Pi</td>
+                </tr>
+            </table>
+            <div id="resume-button">
+                <a href="src/documents/Pranava_Swaroopa.pdf" download>
+                    <button>RESUME</button>
+                </a>
+            </div>
         </div>
     </div>
 
-    <div class="info">
-        <h2 id="about">About me</h2><img src="src/images/Paw_RGB__Orange.png" />
-        <p class="study">Studying M.S. in Automotive Engineering currently at the
-            <b><span id="clemson">Clemson Univerisity</span> - International Center for Automotive Research</b> <br>
-            Graduating in August 2023.
-        </p>
+    <h1 class="experience">Experience</h1>
+    <section class="design-section">
+        <div class="timeline">
+        <!--Well, The reason for this div is to fill space. 
+        This space is technically used for keeping dates, 
+        but I didn't find the need for dates. However, I'll provide 
+        you the styling for dates, so that you can use it if you 
+        wanted to.-->
+            <div class="timeline-empty">
+            </div>
         
-        <hr>
-        <h3>Education</h3>
-        <table>
-            <tr>
-              <td>2021 - 2023</td>
-              <td><div class="edu-det"><b>Master of Science in Automotive Engineering</b></div></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><div class="edu-det">Clemson Univerisity - ICAR</div></td>
-            </tr>
-            <tr>
-              <td>2013 - 2017</td>
-              <td><div class="edu-det"><b>Bachelors of Technology in Mechanical Engineering</b></div></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><div class="edu-det">Manipal Institute of Technology, India</div></td>
-            </tr>
-        </table>
-        <hr>
+        <!--This is the class where the timeline graphics are 
+        housed in. Note that we have timeline-circle 
+        here for that pointer in timeline.-->
+        
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+            <div class="timeline-component timeline-content">
+                <h4>2023 Jan - Present</h4>
+                <h3>Graduate Research Intern</h3>
+                <ul>
+                    <li>Perceiving traversable space in unstructured terrain in the context of mobile robots by learning global patterns.</li>
+                    <li>Built a ROS toolchain to record videos in nearby forests for creating traversable space data set.</li>
+                    <li>Developing a neural network that can navigate terrain by analyzing a sequence of images at a time.</li>
+                </ul>
+            </div>
+            <div class="timeline-component timeline-content right-just">
+                <h4>2021 Sep - 2022 Dec</h4>
+                <h3>Graduate Research Assistant</h3>
+                <ul>
+                    <li>Setup and deployment of ROS in mobile robots like Clearpath Husky, Jackal, and Turtlebot 3.</li>
+                    <li>HIL and SIL testing of navigation algorithms in ROS-based mobile robots.</li>
+                </ul>
+            </div>
 
-        <h3>Technical Skills</h3>
-        <table>
-            <tr>
-              <td>Languages:</td>
-              <td>C/C++, Python</td>
-            </tr>
-            <tr>
-              <td>Tools:</td>
-              <td>Git, ROS, MATLAB, Docker, Visual Studio</td>
-            </tr>
-            <tr>
-              <td>Simulation Env:</td>
-              <td>Gazebo, LG-SVL, CoppeliaSim, Project Chrono</td>
-            </tr>
-            <tr>
-                <td>Design Software:</td>
-                <td>SolidWorks, Siemens NX, AutoCAD, CATIA V5</td>
-            </tr>
-            <tr>
-                <td>OS:</td>
-                <td>Ubuntu, Windows, Raspberry Pi</td>
-            </tr>
-          </table>
-        <div id="resume-button">
-            <a href="src/Pranava_Swaroopa.pdf" download>
-                <button>RESUME</button>
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+            <div class="timeline-empty">
+            </div>
+            <div class="timeline-empty">
+            </div>
+
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+            <div class=" timeline-component timeline-content">
+                <h4>2020 Jul - 2021 Jun</h4>
+                <h3>Research Assistant</h3>
+                <ul>
+                    <li>Configured and set up video recording setup for observing fly behavior complete with custom camera and lighting.</li>
+                    <li>Implemented computer vision deep learning models to behavior identification.</li>
+                </ul>
+            </div>
+            <div class="timeline-component timeline-content right-just">
+                <h4>2017 Aug - 2019 Jun</h4>
+                <h3>Assistant Manager</h3>
+                <ul>
+                    <li>Led a team of 5 people as an Engineer consultant for a $6 million project.</li>
+                    <li>Increased cross-team collaboration for accelerated project completion.</li>
+                </ul>
+            </div>
+            <div class="timeline-middle-last">
+                <div class="timeline-circle"></div>
+            </div>
+        </div>
+    </section>
+
+    <h1 id="project">Projects</h1>
+    <div id="second-slide">
+
+        <div class="project" id="sev-wea" onclick="on(1)">
+            <!-- <a href="https://github.com/ppswaroopa/Lane-Detection-In-Foggy-Weather" target="_blank"> -->
+                <img src="src/images/severe_sq.png">
+                <h3>Drivable Area Detection under Severe Weather</h3>
+            <!-- </a> -->
+        </div>
+
+        <div class="project" id="autobot" onclick="on(2)">
+            <!-- <a href="https://github.com/ppswaroopa/Aue8230Spring2022_Group7/tree/main/group7_ws/src/auefinals" target="_blank"> -->
+                <img src="src/images/auto_bot.gif">
+                <h3>Autonomous Turtlebot</h3>
+            <!-- </a> -->
+        </div>
+
+        <div class="project" id="astar" onclick="on(3)">
+            <!-- <a href="https://github.com/ppswaroopa/route_planner_ND" target="_blank"> -->
+                <img src="src/images/ND_aStar.png">
+                <h3>A* Route Planner</h3>
+            <!-- </a> -->
+        </div>
+
+        <div class="project" id="agrawal-lab" onclick="on(4)">
+            <!-- <a href="https://github.com/ppswaroopa/route_planner_ND" target="_blank"> -->
+                <img src="src/images/agrawal-lab.png">
+                <h3>Agrawal Lab</h3>
+            <!-- </a> -->
+        </div>
+
+    </div>
+
+    <div class="project-details" id="sev-wea-det" onclick="off(1)">
+        <div class="project-details-left">
+            <h2>Drivable Area Detection in Severe Weather</h2>
+            <img src="src/images/severe_sq.png">
+        </div>
+        <div class="project-details-right">
+            <h3>Highlights</h3>
+            <ul>
+                <li>Team of 3</li>
+                <li>20 Layer DNN Network</li>
+                <li>Encoder-Decorder configuration</li>
+                <li>15.6K selected images from BDD100K dataset</li>
+                <li>Pipeline developed that can process a given video and recognize and draw drivable area in it</li>
+                <li>Complete project was setup and run in Palmetto HPC, Clemson Univerisity</li>
+            </ul>
+            <a href="https://github.com/ppswaroopa/Lane-Detection-In-Foggy-Weather" target="_blank" style="padding-right: 3%; text-decoration: none;">
+                <!-- <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/> -->
+                <i class="fa-brands fa-github fa-3x" style="color: #ffffff;"></i>
+            </a>
+            <a href="https://youtu.be/N1VKDhaKGTs" target="_blank">
+                <!-- <img src="src/images/youtube_social_icon_dark.png" width="55px"> -->
+                <i class="fa-brands fa-youtube fa-3x" style="color: #ffffff;"></i>
+            </a>
+            <p>
+                We wanted to develop a neural network that helps vehicles find traversable/ drivable path where the weather is not ideal.
+                Initial thought was can we develop something that is simple in implementation but shows good accuracy. This was done as
+                part of course credit and which meant we had only a month of time to select dataset, develop a network and tune it. We
+                developed a simple Encoder-Decorder network and selected BDD100K as our dataset. To concentrate our training we selected 
+                images tagged with weather conditions like rainy, foggy, snowy, and cloudy. We acheived a mIOU = 44.15%.
+            </p>
+        </div>
+    </div>
+
+    <div class="project-details" id="autobot-det" onclick="off(2)">
+        <div class="project-details-left">
+            <h2>Autonomous Turtlebot</h2>
+            <img src="src/images/auto_bot.gif">
+        </div>
+        <div class="project-details-right">
+            <h3>Highlights</h3>
+            <ul>
+                <li>Lead the Team of 4</li>
+                <li>Developed PID controllers to use LIDAR data to keep the robot away from all obstacles and be at the center</li>
+                <li>Using camera images, developed a PID controller to follow a line on the track and used miniYOLO to analyze and
+                    respond to a STOP sign.</li>
+                <li>Implemented a cron job to get useful data sent before every test, which resulted in a faster testing schedule.</li>
+                <li>For successfully implementing the project, received the highest grade in the class</li>
+            </ul>
+            <a href="https://github.com/ppswaroopa/Aue8230Spring2022_Group7/tree/main/group7_ws/src/auefinals" target="_blank" style="padding-right: 3%; text-decoration: none;">
+                <!-- <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/> -->
+                <i class="fa-brands fa-github fa-3x" style="color: #ffffff;"></i>
+            </a>
+            <a href="https://youtu.be/YXchdEtqzsE" target="_blank">
+                <!-- <img src="src/images/youtube_social_icon_dark.png" width="55px" alt="Project Demo"> -->
+                <i class="fa-brands fa-youtube fa-3x" style="color: #ffffff;"></i>
             </a>
         </div>
     </div>
-</div>
 
-<h1 id="project">Projects</h1>
-<div id="second-slide">
-
-<div class="project" id="sev-wea" onclick="on(1)">
-    <!-- <a href="https://github.com/ppswaroopa/Lane-Detection-In-Foggy-Weather" target="_blank"> -->
-        <img src="src/images/severe_sq.png">
-        <h3>Drivable Area Detection under Severe Weather</h3>
-    <!-- </a> -->
-</div>
-
-<div class="project" id="autobot" onclick="on(2)">
-    <!-- <a href="https://github.com/ppswaroopa/Aue8230Spring2022_Group7/tree/main/group7_ws/src/auefinals" target="_blank"> -->
-        <img src="src/images/auto_bot.gif">
-        <h3>Autonomous Turtlebot</h3>
-    <!-- </a> -->
-</div>
-
-<div class="project" id="astar" onclick="on(3)">
-    <!-- <a href="https://github.com/ppswaroopa/route_planner_ND" target="_blank"> -->
-        <img src="src/images/ND_aStar.png">
-        <h3>A* Route Planner</h3>
-    <!-- </a> -->
-</div>
-
-<div class="project" id="agrawal-lab" onclick="on(4)">
-    <!-- <a href="https://github.com/ppswaroopa/route_planner_ND" target="_blank"> -->
-        <img src="src/images/agrawal-lab.png">
-        <h3>Agrawal Lab</h3>
-    <!-- </a> -->
-</div>
-
-</div>
-
-<div class="project-details" id="sev-wea-det" onclick="off(1)">
-    <div class="project-details-left">
-        <h2>Drivable Area Detection in Severe Weather</h2>
-        <img src="src/images/severe_sq.png">
+    <div class="project-details" id="astar-det" onclick="off(3)">
+        <div class="project-details-left">
+            <h2>A* Route Planner</h2>
+            <img src="src/images/ND_aStar.png">
+        </div>
+        <div class="project-details-right">
+            <h3>Highlights</h3>
+            <ul>
+                <li>Lead the Team of 4</li>
+                <li>Developed PID controllers to use LIDAR data to keep the robot away from all obstacles and be at the center</li>
+                <li>Using camera images, developed a PID controller to follow a line on the track and used miniYOLO to analyze and
+                    respond to a STOP sign.</li>
+                <li>Implemented a cron job to get useful data sent before every test, which resulted in a faster testing schedule.</li>
+                <li>For successfully implementing the project, received the highest grade in the class</li>
+            </ul>
+            <a href="https://github.com/ppswaroopa/route_planner_ND" target="_blank" style="padding-right: 3%; text-decoration: none;">
+                <!-- <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/> -->
+                <i class="fa-brands fa-github fa-3x" style="color: #ffffff;"></i>
+            </a>
+            <!-- <a href="https://youtu.be/YXchdEtqzsE" target="_blank">
+                <img src="src/images/youtube_social_icon_dark.png" width="55px" alt="Project Demo">
+            </a> -->
+        </div>
     </div>
-    <div class="project-details-right">
-        <h3>Highlights</h3>
-        <ul>
-            <li>Team of 3</li>
-            <li>20 Layer DNN Network</li>
-            <li>Encoder-Decorder configuration</li>
-            <li>15.6K selected images from BDD100K dataset</li>
-            <li>Pipeline developed that can process a given video and recognize and draw drivable area in it</li>
-            <li>Complete project was setup and run in Palmetto HPC, Clemson Univerisity</li>
-        </ul>
-        <a href="https://github.com/ppswaroopa/Lane-Detection-In-Foggy-Weather" target="_blank" style="padding-right: 3%; text-decoration: none;">
-            <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/>
-        </a>
-        <a href="https://youtu.be/N1VKDhaKGTs" target="_blank">
-            <img src="src/images/youtube_social_icon_dark.png" width="55px">
-        </a>
-    </div>
-</div>
 
-<div class="project-details" id="autobot-det" onclick="off(2)">
-    <div class="project-details-left">
-        <h2>Autonomous Turtlebot</h2>
-        <img src="src/images/auto_bot.gif">
+    <div class="project-details" id="agrawal-lab-det" onclick="off(4)">
+        <div class="project-details-left">
+            <h2>Agrawal Lab Website Project</h2>
+            <img src="src/images/agrawal-lab.png">
+        </div>
+        <div class="project-details-right">
+            <h3>Highlights</h3>
+            <ul>
+                <li>Website built and hosted with Wix</li>
+                <li>Made in mind with ease of maintenance</li>
+                <li>Visit at <a href="https://www.agrawallab.com/" target="_blank" style="text-decoration: underline; color: inherit;">agrawallab.com</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="project-details-right">
-        <h3>Highlights</h3>
-        <ul>
-            <li>Lead the Team of 4</li>
-            <li>Developed PID controllers to use LIDAR data to keep the robot away from all obstacles and be at the center</li>
-            <li>Using camera images, developed a PID controller to follow a line on the track and used miniYOLO to analyze and
-                respond to a STOP sign.</li>
-            <li>Implemented a cron job to get useful data sent before every test, which resulted in a faster testing schedule.</li>
-            <li>For successfully implementing the project, received the highest grade in the class</li>
-        </ul>
-        <a href="https://github.com/ppswaroopa/Aue8230Spring2022_Group7/tree/main/group7_ws/src/auefinals" target="_blank" style="padding-right: 3%; text-decoration: none;">
-            <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/>
-        </a>
-        <a href="https://youtu.be/YXchdEtqzsE" target="_blank">
-            <img src="src/images/youtube_social_icon_dark.png" width="55px" alt="Project Demo">
-        </a>
-    </div>
-</div>
 
-<div class="project-details" id="astar-det" onclick="off(3)">
-    <div class="project-details-left">
-        <h2>A* Route Planner</h2>
-        <img src="src/images/ND_aStar.png">
-    </div>
-    <div class="project-details-right">
-        <h3>Highlights</h3>
-        <ul>
-            <li>Lead the Team of 4</li>
-            <li>Developed PID controllers to use LIDAR data to keep the robot away from all obstacles and be at the center</li>
-            <li>Using camera images, developed a PID controller to follow a line on the track and used miniYOLO to analyze and
-                respond to a STOP sign.</li>
-            <li>Implemented a cron job to get useful data sent before every test, which resulted in a faster testing schedule.</li>
-            <li>For successfully implementing the project, received the highest grade in the class</li>
-        </ul>
-        <a href="https://github.com/ppswaroopa/route_planner_ND" target="_blank" style="padding-right: 3%; text-decoration: none;">
-            <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/>
-        </a>
-        <!-- <a href="https://youtu.be/YXchdEtqzsE" target="_blank">
-            <img src="src/images/youtube_social_icon_dark.png" width="55px" alt="Project Demo">
-        </a> -->
-    </div>
-</div>
+    <!-- <div class="vertical-line"></div>
+    <div class="dot">HOW</div> -->
 
-<div class="project-details" id="agrawal-lab-det" onclick="off(4)">
-    <div class="project-details-left">
-        <h2>Agrawal Lab Website Project</h2>
-        <img src="src/images/agrawal-lab.png">
-    </div>
-    <div class="project-details-right">
-        <h3>Highlights</h3>
-        <ul>
-            <li>Website built and hosted with Wix</li>
-            <li>Made in mind with ease of maintenance</li>
-            <li>Visit at <a href="https://www.agrawallab.com/" target="_blank" style="text-decoration: underline; color: inherit;">agrawallab.com</a></li>
-        </ul>
-        <!-- <a href="https://github.com/ppswaroopa/route_planner_ND" target="_blank" style="padding-right: 3%; text-decoration: none;">
-            <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/>
-        </a> -->
-        <!-- <a href="https://youtu.be/YXchdEtqzsE" target="_blank">
-            <img src="src/images/youtube_social_icon_dark.png" width="55px" alt="Project Demo">
-        </a> -->
-    </div>
-</div>
 </body>
-<footer>
-    <p>Designed and Developed by Pranava Swaroopa</p>
-  </footer>
+    <footer>
+        <p>Designed and Developed by Pranava Swaroopa</p>
+    </footer>
 </html>
