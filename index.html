@@ -160,39 +160,60 @@
             </div>
         </div>
     </section>
-
+    <!-- <hr style="color: #fff;"> -->
     <h1 id="project">Projects</h1>
     <div id="second-slide">
 
+        <div class="project" id="off-road" onclick="on(5)">
+                <img src="src/images/offroad.gif">
+                <h3>Off Road Autonomy</h3>
+        </div>
+
         <div class="project" id="sev-wea" onclick="on(1)">
-            <!-- <a href="https://github.com/ppswaroopa/Lane-Detection-In-Foggy-Weather" target="_blank"> -->
                 <img src="src/images/severe_sq.png">
                 <h3>Drivable Area Detection under Severe Weather</h3>
-            <!-- </a> -->
         </div>
 
         <div class="project" id="autobot" onclick="on(2)">
-            <!-- <a href="https://github.com/ppswaroopa/Aue8230Spring2022_Group7/tree/main/group7_ws/src/auefinals" target="_blank"> -->
                 <img src="src/images/auto_bot.gif">
                 <h3>Autonomous Turtlebot</h3>
-            <!-- </a> -->
         </div>
 
         <div class="project" id="astar" onclick="on(3)">
-            <!-- <a href="https://github.com/ppswaroopa/route_planner_ND" target="_blank"> -->
                 <img src="src/images/ND_aStar.png">
                 <h3>A* Route Planner</h3>
-            <!-- </a> -->
         </div>
 
         <div class="project" id="agrawal-lab" onclick="on(4)">
-            <!-- <a href="https://github.com/ppswaroopa/route_planner_ND" target="_blank"> -->
                 <img src="src/images/agrawal-lab.png">
-                <h3>Agrawal Lab</h3>
-            <!-- </a> -->
+                <h3>Agrawal Lab Website</h3>
         </div>
 
     </div>
+
+    <div class="project-details" id="off-road-det" onclick="off(5)">
+        <div class="project-details-left">
+            <h2>Off Road Autonomy</h2>
+            <img src="src/images/offroad.gif">
+        </div>
+        <div class="project-details-right">
+            <h3>Highlights</h3>
+            <ul>
+                <li>PI: Dr Adam Hoover, Holcombe Department of Electrical and Computer Engineering, Clemson Univeristy</li>
+                <li>Video based neural network</li>
+                <li>Dataset generation from Clemson Experimental Forest</li>
+                <li>Annotation and developing CNN pipeline</li>
+            </ul>
+            <!-- <a href="https://github.com/ppswaroopa/Lane-Detection-In-Foggy-Weather" target="_blank" style="padding-right: 3%; text-decoration: none;">
+                <i class="fa-brands fa-github fa-3x" style="color: #ffffff;"></i>
+            </a>
+            <a href="https://youtu.be/N1VKDhaKGTs" target="_blank">
+                <i class="fa-brands fa-youtube fa-3x" style="color: #ffffff;"></i>
+            </a> -->
+            <p><b>Tools</b>: Python, C++, OpenCV, TensorFlow, HPC</p>
+        </div>
+    </div>
+
 
     <div class="project-details" id="sev-wea-det" onclick="off(1)">
         <div class="project-details-left">
@@ -207,7 +228,8 @@
                 <li>Encoder-Decorder configuration</li>
                 <li>15.6K selected images from BDD100K dataset</li>
                 <li>Pipeline developed that can process a given video and recognize and draw drivable area in it</li>
-                <li>Complete project was setup and run in Palmetto HPC, Clemson Univerisity</li>
+                <li>Built with Palmetto HPC - Clemson Univerisity</li>
+                <li>Acheived mIOU = 44.15%</li>
             </ul>
             <a href="https://github.com/ppswaroopa/Lane-Detection-In-Foggy-Weather" target="_blank" style="padding-right: 3%; text-decoration: none;">
                 <!-- <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/> -->
@@ -217,6 +239,7 @@
                 <!-- <img src="src/images/youtube_social_icon_dark.png" width="55px"> -->
                 <i class="fa-brands fa-youtube fa-3x" style="color: #ffffff;"></i>
             </a>
+            <p><b>Tools</b>: Python, OpenCV, TensorFlow, HPC, Jupyer Notebook</p>
             <p>
                 We wanted to develop a neural network that helps vehicles find traversable/ drivable path where the weather is not ideal.
                 Initial thought was can we develop something that is simple in implementation but shows good accuracy. This was done as
@@ -250,6 +273,7 @@
                 <!-- <img src="src/images/youtube_social_icon_dark.png" width="55px" alt="Project Demo"> -->
                 <i class="fa-brands fa-youtube fa-3x" style="color: #ffffff;"></i>
             </a>
+            <p><b>Tools</b>: Python, ROS, OpenCV, miniYOLO, Raspberry Pi, Ubuntu</p>
         </div>
     </div>
 
@@ -261,12 +285,10 @@
         <div class="project-details-right">
             <h3>Highlights</h3>
             <ul>
-                <li>Lead the Team of 4</li>
-                <li>Developed PID controllers to use LIDAR data to keep the robot away from all obstacles and be at the center</li>
-                <li>Using camera images, developed a PID controller to follow a line on the track and used miniYOLO to analyze and
-                    respond to a STOP sign.</li>
-                <li>Implemented a cron job to get useful data sent before every test, which resulted in a faster testing schedule.</li>
-                <li>For successfully implementing the project, received the highest grade in the class</li>
+                <li>Project built in Ubuntu Linux</li>
+                <li>Uses maps from OpenStreetMap library</li>
+                <li>Implemented core logic using OOP</li>
+                <li>Part of C++ Nanodegree from Udacity </li>
             </ul>
             <a href="https://github.com/ppswaroopa/route_planner_ND" target="_blank" style="padding-right: 3%; text-decoration: none;">
                 <!-- <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/> -->
@@ -275,6 +297,7 @@
             <!-- <a href="https://youtu.be/YXchdEtqzsE" target="_blank">
                 <img src="src/images/youtube_social_icon_dark.png" width="55px" alt="Project Demo">
             </a> -->
+            <p><b>Tools</b>: C++, CMake, OpenStreetMap, Ubuntu</p>
         </div>
     </div>
 
@@ -290,6 +313,10 @@
                 <li>Made in mind with ease of maintenance</li>
                 <li>Visit at <a href="https://www.agrawallab.com/" target="_blank" style="text-decoration: underline; color: inherit;">agrawallab.com</a></li>
             </ul>
+            <p><b>Tools</b>: WIX, HTML, CSS, JS</p>
+            <p>This is a lab website I created when I was working for Agrawal Lab as a Research Assistant. Agrawal Lab is a neuroscience 
+                lab focused on Drosophila Melanogaster.
+            </p>
         </div>
     </div>
 

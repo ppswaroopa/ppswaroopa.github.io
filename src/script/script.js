@@ -11,6 +11,9 @@ function on(a) {
   if (a == 4) {
     document.getElementById("agrawal-lab-det").style.display = "flex";
   }
+  if (a == 5) {
+    document.getElementById("off-road-det").style.display = "flex";
+  }
   document.querySelector('body').style.overflow = "hidden";
 }
 
@@ -26,6 +29,9 @@ function off(b) {
   }
   if (b == 4) {
     document.getElementById("agrawal-lab-det").style.display = "none";
+  }
+  if (b == 5) {
+    document.getElementById("off-road-det").style.display = "none";
   }
   document.querySelector('body').style.overflow = "auto";
 }
