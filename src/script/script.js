@@ -35,3 +35,31 @@ function off(b) {
   }
   document.querySelector('body').style.overflow = "auto";
 }
+
+const navLinks = document.querySelectorAll('.navbar a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', event => {
+        event.preventDefault(); // Prevent default link behavior
+        const targetSectionId = link.getAttribute('href');
+        const targetSection = document.querySelector(targetSectionId);
+        
+        if (targetSection) {
+            // Calculate the scroll position of the target section
+            const targetOffset = targetSection.offsetTop;
+            
+            // Scroll to the target section with smooth behavior
+            window.scrollTo({
+                top: targetOffset,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+const menuToggle = document.querySelector('.menu-toggle');
+const navbar = document.querySelector('.navbar');
+
+menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+});
