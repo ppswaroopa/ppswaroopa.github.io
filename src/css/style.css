@@ -2,6 +2,7 @@ html {
     font-family: sans-serif;
     line-height: 1.15;
     height: 100%;
+    scroll-behavior: smooth;
 }
 @font-face {
     font-family: 'Southern Jannie';
@@ -18,8 +19,38 @@ body {
     font-family: 'Myriad Pro', sans-serif;
     overflow: auto;
 }
+.navbar {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    /* padding: 2%; */
+    /* padding-bottom: 30px; */
+    margin: 2%;
+    margin-right: 4%;
+    border-radius: 30px;
+    display: flex; /* Display links in a row */
+    flex-direction: row; /* Align links vertically */
+    align-items: flex-end; /* Align links to the right */
+}
+
+/* Style for navigation links */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px 0; /* Add some vertical spacing between links */
+}
+
+/* Styles for burger menu icon */
+.menu-toggle {
+    display: none; /* Initially hide for larger screens */
+    cursor: pointer;
+}
+
 #first-slide {
-    padding-top: 3%;
+    padding-top: 6%;
     display: flex;
 }
 #profile-message {
@@ -331,6 +362,29 @@ footer {
 
 @media screen and (max-width: 481px) {
 
+.menu-toggle {
+    display: block; /* Show the burger menu icon */
+}
+.navbar {
+    /* display: block;
+    margin-top: 2%;
+    margin-bottom: 10%; */
+    display: none; /* Hide the navigation links initially */
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+}
+
+.navbar.active {
+    display: block;
+}
+
+.menu-toggle {
+    display: block;
+}
 #first-slide {
     display: block;
 }
