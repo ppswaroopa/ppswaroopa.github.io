@@ -14,6 +14,12 @@ function on(a) {
   if (a == 5) {
     document.getElementById("off-road-det").style.display = "flex";
   }
+  if (a == 6) {
+    document.getElementById("sysmon-det").style.display = "flex";
+  }
+  if (a == 7) {
+    document.getElementById("snakegame-det").style.display = "flex";
+  }
   document.querySelector('body').style.overflow = "hidden";
 }
 
@@ -32,6 +38,12 @@ function off(b) {
   }
   if (b == 5) {
     document.getElementById("off-road-det").style.display = "none";
+  }
+  if (b == 6) {
+    document.getElementById("sysmon-det").style.display = "none";
+  }
+  if (b == 7) {
+    document.getElementById("snakegame-det").style.display = "none";
   }
   document.querySelector('body').style.overflow = "auto";
 }
@@ -58,8 +70,13 @@ navLinks.forEach(link => {
 });
 
 const menuToggle = document.querySelector('.menu-toggle');
-const navbar = document.querySelector('.navbar');
+const navbar = document.getElementsByClassName('navbar');
+// const burger = document.querySelector('.menu-toggle i');
 
 menuToggle.addEventListener('click', () => {
-    navbar.classList.toggle('active');
+    if (navbar.style.display == 'none'){
+      navbar.style.display == 'block';
+    } else {
+      navbar.style.display = 'none';
+    }
 });

@@ -8,18 +8,23 @@
         <meta name="author" content="Pranava Swaroopa">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="src/css/style.css">
+        <link rel="icon" type="image/x-icon" href="src/images/Profile_Image.png">
         <script type="text/javascript" src="src/script/script.js"></script>
         <script src="https://kit.fontawesome.com/f0de5b417b.js" crossorigin="anonymous"></script>
     </head>
 <body>
     <div class="menu-toggle">
-        <i class="fa-solid fa-bars" style="color: #fcfcfc;"></i>
-        </div>
-    <div class="navbar">
-        <a href="#first-slide">Introduction</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
+        <i class="fa-solid fa-bars fa-2xl" style="color: #fcfcfc;"></i>
     </div>
+    <div class="navbar">
+        
+        <div class="nav-links">
+            <a href="#first-slide">Introduction</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+        </div> 
+    </div>
+
     <!-- <script> configObj = {"buttonD":"M11.384 13.333h9.232c.638 0 .958.68.505 1.079l-4.613 4.07c-.28.246-.736.246-1.016 0l-4.613-4.07c-.453-.399-.133-1.079.505-1.079z","buttonT":"translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)","shadowSize":"none","roundnessSize":"12px","buttonDToBottom":"32px","buttonDToRight":"32px","selectedBackgroundColor":"#ffb30b","selectedIconColor":"#626a7e","buttonWidth":"40px","buttonHeight":"40px","svgWidth":"32px","svgHeight":"32px"};function createButton(obj, pageSimulator) {    const body = document.querySelector("body");    backToTopButton = document.createElement("span");    backToTopButton.classList.add("softr-back-to-top-button");    backToTopButton.id = "softr-back-to-top-button";    pageSimulator      ? pageSimulator.appendChild(backToTopButton)      : body.appendChild(backToTopButton);    backToTopButton.style.width = obj.buttonWidth;    backToTopButton.style.height = obj.buttonHeight;    backToTopButton.style.marginRight = obj.buttonDToRight;    backToTopButton.style.marginBottom = obj.buttonDToBottom;    backToTopButton.style.borderRadius = obj.roundnessSize;    backToTopButton.style.boxShadow = obj.shadowSize;    backToTopButton.style.color = obj.selectedBackgroundColor;    backToTopButton.style.backgroundColor = obj.selectedBackgroundColor;    pageSimulator ? backToTopButton.style.position = "absolute" : backToTopButton.style.position = "fixed";    backToTopButton.style.outline = "none";    backToTopButton.style.bottom = "0px";    backToTopButton.style.right = "0px";    backToTopButton.style.cursor = "pointer";    backToTopButton.style.textAlign = "center";    backToTopButton.style.border = "solid 2px currentColor";    backToTopButton.innerHTML =      '<svg class="back-to-top-button-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" > <g fill="none" fill-rule="evenodd"> <path d="M0 0H32V32H0z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> <path class="back-to-top-button-img" fill-rule="nonzero" d="M11.384 13.333h9.232c.638 0 .958.68.505 1.079l-4.613 4.07c-.28.246-.736.246-1.016 0l-4.613-4.07c-.453-.399-.133-1.079.505-1.079z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> </g> </svg>';    backToTopButtonSvg = document.querySelector(".back-to-top-button-svg");    backToTopButtonSvg.style.verticalAlign = "middle";    backToTopButtonSvg.style.margin = "auto";    backToTopButtonSvg.style.justifyContent = "center";    backToTopButtonSvg.style.width = obj.svgWidth;    backToTopButtonSvg.style.height = obj.svgHeight;    backToTopButton.appendChild(backToTopButtonSvg);    backToTopButtonImg = document.querySelector(".back-to-top-button-img");    backToTopButtonImg.style.fill = obj.selectedIconColor;    backToTopButtonSvg.appendChild(backToTopButtonImg);    backToTopButtonImg.setAttribute("d", obj.buttonD);    backToTopButtonImg.setAttribute("transform", obj.buttonT);        if(!pageSimulator) {      backToTopButton.style.display = "none";      window.onscroll = function() {        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {          backToTopButton.style.display = "block";        } else {          backToTopButton.style.display = "none";        }      };        backToTopButton.onclick = function() {        document.body.scrollTop = 0;        document.documentElement.scrollTop = 0;      };    }  };document.addEventListener("DOMContentLoaded", function() { createButton(configObj, null); });</script> -->
     <div id="first-slide">
         <div id="profile-message">
@@ -122,17 +127,19 @@
                 <h4>2023 Jan - Present</h4>
                 <h3>Graduate Research Intern</h3>
                 <ul>
-                    <li>Perceiving traversable space in unstructured terrain in the context of mobile robots by learning global patterns.</li>
-                    <li>Built a ROS toolchain to record videos in nearby forests for creating traversable space data set.</li>
-                    <li>Developing a neural network that can navigate terrain by analyzing a sequence of images at a time.</li>
+                    <li>Collaboratively developed an off-road dataset that identifies area of traversability in high-speed autonomous vehicle setting sponsored by VIPR-GS, US Army</li>
+                    <li>Led development of robust annotating software using C++, Win32 API and OpenCV and reduced annotation time by 97%</li>
+                    <li>Deployed ROS tool-chain to capture high-resolution videos and used Python and FFmpeg to create a comprehensive traversable dataset for off-road terrains.</li>
+                    <li>Implemented a video input neural network, enabling precise identification and navigation of unexplored and challenging off-road terrains, such as dense forests and uncharted terrains.</li>
                 </ul>
             </div>
             <div class="timeline-component timeline-content right-just">
                 <h4>2021 Sep - 2022 Dec</h4>
                 <h3>Graduate Research Assistant</h3>
                 <ul>
-                    <li>Setup and deployment of ROS in mobile robots like Clearpath Husky, Jackal, and Turtlebot 3.</li>
-                    <li>HIL and SIL testing of navigation algorithms in ROS-based mobile robots.</li>
+                    <li>Experienced in ROS deployment for robotic platforms like Clearpath Husky, Jackal, and Turtlebot3 for testing and validation.</li>
+                    <li>Demonstrated application of control techniques in simulation environments such as Gazebo, CoppeliaSim, and Project Chrono to develop and validate on wheeled mobile robotic platforms.</li>
+                    <li>Conducted HIL and SIL testing for navigation algorithms in mobile robots for robustness and reliability in real-world scenarios.</li>
                 </ul>
             </div>
 
@@ -151,16 +158,17 @@
                 <h4>2020 Jul - 2021 Jun</h4>
                 <h3>Research Assistant</h3>
                 <ul>
-                    <li>Configured and set up video recording setup for observing fly behavior complete with custom camera and lighting.</li>
-                    <li>Implemented computer vision deep learning models to behavior identification.</li>
+                    <li>Implemented deep learning models to extract patterns and established data analysis protocols.</li>
+                    <li>Developed software in MATLAB to analyze data points and visualize the results using matplotlib, decreasing inference and turnaround time by 65%.</li>
+                    <li>Established a protocol with bash script and MATLAB to ingest, analyze and extract videos for research.</li>
                 </ul>
             </div>
             <div class="timeline-component timeline-content right-just">
                 <h4>2017 Aug - 2019 Jun</h4>
                 <h3>Assistant Manager</h3>
                 <ul>
-                    <li>Led a team of 5 people as an Engineer consultant for a $6 million project.</li>
-                    <li>Increased cross-team collaboration for accelerated project completion.</li>
+                    <li>Led a team of 5 engineers as an Engineer consultant for a $6 million project.</li>
+                    <li>Orchestrated and directed cross-functional teams comprising design professionals, contractors, and site personnel.</li>
                 </ul>
             </div>
             <div class="timeline-middle-last">
@@ -180,7 +188,7 @@
         </div>
 
         <div class="project" id="sev-wea" onclick="on(1)">
-                <img src="src/images/severe_sq.png">
+                <img src="src/images/severe.gif">
                 <h3>Drivable Area Detection under Severe Weather</h3>
         </div>
 
@@ -192,6 +200,16 @@
         <div class="project" id="astar" onclick="on(3)">
                 <img src="src/images/ND_aStar.png">
                 <h3>A* Route Planner</h3>
+        </div>
+
+        <div class="project" id="sysmon" onclick="on(6)">
+            <img src="src/images/sysmon.png">
+            <h3>Linux System Monitor</h3>
+        </div>
+
+        <div class="project" id="snakegame" onclick="on(7)">
+            <img src="src/images/snakegame.gif">
+            <h3>Snake Game</h3>
         </div>
 
         <div class="project" id="agrawal-lab" onclick="on(4)">
@@ -332,6 +350,59 @@
     </div>
     <!-- <div class="vertical-line"></div>
     <div class="dot">HOW</div> -->
+    
+    <div class="project-details" id="sysmon-det" onclick="off(6)">
+        <div class="project-details-left">
+            <h2>Linux System Monitor</h2>
+            <img src="src/images/sysmon.png">
+        </div>
+        <div class="project-details-right">
+            <h3>Highlights</h3>
+            <ul>
+                <li>Developed in C++</li>
+                <li>Program mimics implementation of htop/top in linux.</li>
+                <li>Details are parsed from different files stored in the linux filesystem.</li>
+                <li>Goal: To understand how system data is stored in linux 'proc' directory.</li>
+                <li>Understand reading from a file and parsing data.</li>
+            </ul>
+            <a href="https://github.com/ppswaroopa/Linux-System-Monitor" target="_blank" style="padding-right: 3%; text-decoration: none;">
+                <!-- <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/> -->
+                <i class="fa-brands fa-github fa-3x" style="color: #ffffff;"></i>
+            </a>
+            <p><b>Tools</b>: C++, CMake, Ubuntu</p>
+            <p>
+                
+            </p>
+        </div>
+    </div>
+
+    <div class="project-details" id="snakegame-det" onclick="off(7)">
+        <div class="project-details-left">
+            <h2>Snake Game (Improvised)</h2>
+            <img src="src/images/snakegame.gif">
+        </div>
+        <div class="project-details-right">
+            <h3>Highlights</h3>
+            <ul>
+                <li>Developed in C++</li>
+                <li>Improvised implementation of the classic Snake Game</li>            
+                <li>Goal: To develop a game while using all OOP concepts</li>
+                <li>Understand and implement Game Design Pattern</li>
+                <li>Using OOP implementation like data encapsulation, polymorphism and abstraction.</li>
+                <li>Making sure unnecessary duplication of data by the use of pointers</li>
+                <li>Use of multithreading to make use of multi-core CPU capabilities.</li>
+            </ul>
+            <a href="https://github.com/ppswaroopa/Snake-Game" target="_blank" style="padding-right: 3%; text-decoration: none;">
+                <!-- <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/> -->
+                <i class="fa-brands fa-github fa-3x" style="color: #ffffff;"></i>
+            </a>
+            <p><b>Tools</b>: C++, CMake, Ubuntu</p>
+            <p>
+                
+            </p>
+        </div>
+    </div>
+
 
 </body>
     <footer>
