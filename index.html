@@ -4,7 +4,7 @@
         <title>Pranava Swaroopa</title>
         <meta charset="UTF-8">
         <meta name="description" content="Portfolio webpage">
-        <meta name="keywords" content="ppswaroopa, robotics, engineer">
+        <meta name="keywords" content="ppswaroopa, robotics, engineer, autonomous driving">
         <meta name="author" content="Pranava Swaroopa">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="src/css/style.css">
@@ -13,11 +13,11 @@
         <script src="https://kit.fontawesome.com/f0de5b417b.js" crossorigin="anonymous"></script>
     </head>
 <body>
-    <div class="menu-toggle">
-        <i class="fa-solid fa-bars fa-2xl" style="color: #fcfcfc;"></i>
+
+    <div class="menu-toggle" id="menu-toggle">
+        <i class="fa-solid fa-bars fa-2xl"></i>
     </div>
-    <div class="navbar">
-        
+    <div class="navbar" id="navbar">
         <div class="nav-links">
             <a href="#first-slide">Introduction</a>
             <a href="#experience">Experience</a>
@@ -25,22 +25,18 @@
         </div> 
     </div>
 
-    <!-- <script> configObj = {"buttonD":"M11.384 13.333h9.232c.638 0 .958.68.505 1.079l-4.613 4.07c-.28.246-.736.246-1.016 0l-4.613-4.07c-.453-.399-.133-1.079.505-1.079z","buttonT":"translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)","shadowSize":"none","roundnessSize":"12px","buttonDToBottom":"32px","buttonDToRight":"32px","selectedBackgroundColor":"#ffb30b","selectedIconColor":"#626a7e","buttonWidth":"40px","buttonHeight":"40px","svgWidth":"32px","svgHeight":"32px"};function createButton(obj, pageSimulator) {    const body = document.querySelector("body");    backToTopButton = document.createElement("span");    backToTopButton.classList.add("softr-back-to-top-button");    backToTopButton.id = "softr-back-to-top-button";    pageSimulator      ? pageSimulator.appendChild(backToTopButton)      : body.appendChild(backToTopButton);    backToTopButton.style.width = obj.buttonWidth;    backToTopButton.style.height = obj.buttonHeight;    backToTopButton.style.marginRight = obj.buttonDToRight;    backToTopButton.style.marginBottom = obj.buttonDToBottom;    backToTopButton.style.borderRadius = obj.roundnessSize;    backToTopButton.style.boxShadow = obj.shadowSize;    backToTopButton.style.color = obj.selectedBackgroundColor;    backToTopButton.style.backgroundColor = obj.selectedBackgroundColor;    pageSimulator ? backToTopButton.style.position = "absolute" : backToTopButton.style.position = "fixed";    backToTopButton.style.outline = "none";    backToTopButton.style.bottom = "0px";    backToTopButton.style.right = "0px";    backToTopButton.style.cursor = "pointer";    backToTopButton.style.textAlign = "center";    backToTopButton.style.border = "solid 2px currentColor";    backToTopButton.innerHTML =      '<svg class="back-to-top-button-svg" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" > <g fill="none" fill-rule="evenodd"> <path d="M0 0H32V32H0z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> <path class="back-to-top-button-img" fill-rule="nonzero" d="M11.384 13.333h9.232c.638 0 .958.68.505 1.079l-4.613 4.07c-.28.246-.736.246-1.016 0l-4.613-4.07c-.453-.399-.133-1.079.505-1.079z" transform="translate(-1028 -172) translate(832 140) translate(32 32) translate(164) matrix(1 0 0 -1 0 32)" /> </g> </svg>';    backToTopButtonSvg = document.querySelector(".back-to-top-button-svg");    backToTopButtonSvg.style.verticalAlign = "middle";    backToTopButtonSvg.style.margin = "auto";    backToTopButtonSvg.style.justifyContent = "center";    backToTopButtonSvg.style.width = obj.svgWidth;    backToTopButtonSvg.style.height = obj.svgHeight;    backToTopButton.appendChild(backToTopButtonSvg);    backToTopButtonImg = document.querySelector(".back-to-top-button-img");    backToTopButtonImg.style.fill = obj.selectedIconColor;    backToTopButtonSvg.appendChild(backToTopButtonImg);    backToTopButtonImg.setAttribute("d", obj.buttonD);    backToTopButtonImg.setAttribute("transform", obj.buttonT);        if(!pageSimulator) {      backToTopButton.style.display = "none";      window.onscroll = function() {        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {          backToTopButton.style.display = "block";        } else {          backToTopButton.style.display = "none";        }      };        backToTopButton.onclick = function() {        document.body.scrollTop = 0;        document.documentElement.scrollTop = 0;      };    }  };document.addEventListener("DOMContentLoaded", function() { createButton(configObj, null); });</script> -->
     <div id="first-slide">
         <div id="profile-message">
             <div id="hello-message">Hi</div>
-            <div class="name">I am Pranava Swaroopa</div>
+            <div id="name">I am Pranava Swaroopa</div>
             <img id="profile-image" src="src/images/Profile_Image.png" alt="Photo of Pranava Swaroopa">
             <div class="name">I develop robots that can see, think, and act</div>
             <div id="external-links">
                 <a href="https://github.com/ppswaroopa" target="_blank" class="logo">
-                    <!-- <img src="src/images/github-mark-white.svg" alt="Github Profile Link" width="40px"/> -->
-                    <i class="fa-brands fa-github fa-3x" style="color: #ffffff;"></i>
+                    <i class="fa-brands fa-github fa-3x"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/pranavaswaroopa" target="_blank" class="logo">
-                    <!-- <img src="src/images/In-White-128.png" alt="LinkedIn Profile Link" width="40px"/> -->
-                    
-                    <i class="fa-brands fa-linkedin fa-3x" style="color: #fff;"></i>
+                   <i class="fa-brands fa-linkedin fa-3x"></i>
                 </a>
             </div>
         </div>
@@ -110,9 +106,7 @@
         <div class="timeline">
         <!--Well, The reason for this div is to fill space. 
         This space is technically used for keeping dates, 
-        but I didn't find the need for dates. However, I'll provide 
-        you the styling for dates, so that you can use it if you 
-        wanted to.-->
+        but I didn't find the need for dates. -->
             <div class="timeline-empty">
             </div>
         
@@ -177,7 +171,7 @@
         </div>
     </section>
     </div>
-    <!-- <hr style="color: #fff;"> -->
+
     <div id="projects">
     <h1 id="project">Projects</h1>
     <div id="second-slide">
@@ -225,6 +219,9 @@
             <img src="src/images/offroad.gif">
         </div>
         <div class="project-details-right">
+            <div class="close_button">
+                <i class="fa-regular fa-circle-xmark fa-2xl" style="color: #ffffff;"></i>
+            </div>
             <h3>Highlights</h3>
             <ul>
                 <li>PI: Dr Adam Hoover, Holcombe Department of Electrical and Computer Engineering, Clemson Univeristy</li>
@@ -249,6 +246,9 @@
             <img src="src/images/severe_sq.png">
         </div>
         <div class="project-details-right">
+            <div class="close_button">
+                <i class="fa-regular fa-circle-xmark fa-2xl" style="color: #ffffff;"></i>
+            </div>
             <h3>Highlights</h3>
             <ul>
                 <li>Team of 3</li>
@@ -284,6 +284,9 @@
             <img src="src/images/auto_bot.gif">
         </div>
         <div class="project-details-right">
+            <div class="close_button">
+                <i class="fa-regular fa-circle-xmark fa-2xl" style="color: #ffffff;"></i>
+            </div>
             <h3>Highlights</h3>
             <ul>
                 <li>Lead the Team of 4</li>
@@ -311,6 +314,9 @@
             <img src="src/images/ND_aStar.png">
         </div>
         <div class="project-details-right">
+            <div class="close_button">
+                <i class="fa-regular fa-circle-xmark fa-2xl" style="color: #ffffff;"></i>
+            </div>
             <h3>Highlights</h3>
             <ul>
                 <li>Project built in Ubuntu Linux</li>
@@ -335,6 +341,9 @@
             <img src="src/images/agrawal-lab.png">
         </div>
         <div class="project-details-right">
+            <div class="close_button">
+                <i class="fa-regular fa-circle-xmark fa-2xl" style="color: #ffffff;"></i>
+            </div>
             <h3>Highlights</h3>
             <ul>
                 <li>Website built and hosted with Wix</li>
@@ -357,6 +366,9 @@
             <img src="src/images/sysmon.png">
         </div>
         <div class="project-details-right">
+            <div class="close_button">
+                <i class="fa-regular fa-circle-xmark fa-2xl" style="color: #ffffff;"></i>
+            </div>
             <h3>Highlights</h3>
             <ul>
                 <li>Developed in C++</li>
@@ -382,6 +394,9 @@
             <img src="src/images/snakegame.gif">
         </div>
         <div class="project-details-right">
+            <div class="close_button">
+                <i class="fa-regular fa-circle-xmark fa-2xl" style="color: #ffffff;"></i>
+            </div>
             <h3>Highlights</h3>
             <ul>
                 <li>Developed in C++</li>
@@ -402,8 +417,9 @@
             </p>
         </div>
     </div>
-
-
+    <div class="go_up_button" id="go_up_button" onclick="goup()">
+        <i class="fa-solid fa-circle-arrow-up fa-2xl" style="color: #ffffff;"></i>
+    </div>
 </body>
     <footer>
         <p>Designed and Developed by Pranava Swaroopa</p>
