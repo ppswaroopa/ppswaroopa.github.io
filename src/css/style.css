@@ -297,13 +297,15 @@ button:hover {
 }
 
 footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     color: #f0f0f0;
     background-color: #333;
     text-align: center;
     font-size: 12px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .go_up_button {
@@ -312,6 +314,20 @@ footer {
     right: 3%;
 }
 
+/* Set to display:None as it doesn't go with the theme.
+TODO: Arrange the website better to use the traffic widget */
+.traffic {
+    position: relative;  
+    width: 10%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center; 
+    margin-bottom: 20px;
+    display: none;  
+    color: #f0f0f0;
+    font-family: 'Myriad Pro', sans-serif;
+}
 /* Styling for the experience section when the screen size is >481px */
 @media screen and (min-width: 481px) {
     .timeline {
@@ -457,5 +473,10 @@ footer {
 }
 .project-details-right img:last-child {
     padding-left: 5%;
+}
+
+footer {
+    padding-bottom: 1px;
+    padding-top: 1px;
 }
 }
