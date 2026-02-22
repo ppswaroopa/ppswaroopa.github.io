@@ -8,7 +8,7 @@
     <meta name="keywords" content="ppswaroopa, robotics, engineer, autonomous driving">
     <meta name="author" content="Pranava Swaroopa">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css?v=2">
     <link rel="icon" type="image/x-icon" href="src/images/Profile_Image.png">
     <script type="text/javascript" src="src/script/script.js"></script>
     <script src="https://kit.fontawesome.com/f0de5b417b.js" crossorigin="anonymous"></script>
@@ -27,7 +27,7 @@
         </div>
     </div>
 
-    <div id="first-slide">
+    <div id="first-slide" class="section-container">
         <div id="profile-message">
             <div id="hello-message">Hi</div>
             <div id="name">I am Pranava Swaroopa</div>
@@ -44,7 +44,7 @@
         </div>
 
         <div class="info">
-            <h2 id="about">About me</h2><img src="src/images/Paw_RGB__Orange.png" />
+            <h2 id="about">About me</h2>
             <p class="study">M.S. in Automotive Engineering from
                 <b><span id="clemson">Clemson Univerisity</span> International Center for Automotive Research</b> <br>
                 <!-- Graduated in August 2023. -->
@@ -114,125 +114,59 @@
             </div>
         </div>
     </div>
-    <div id="experience">
+    <div id="experience" class="section-container">
         <h1 class="experience">Experience</h1>
-        <section class="design-section">
-            <div class="timeline">
-                <div class="timeline-component timeline-content">
-                    <h4>2025 Jan - Present</h4>
-                    <h3>Robotics Software Engineer</h3>
-                    <h4 style="margin-top: 5px; color: #ddff8f;">Technosoft Engineering</h4>
-                    <ul>
-                        <li>Designed and stabilized industrial AMR autonomy stacks using ROS/ROS2.</li>
-                        <li>Architected production-grade workflows using systemd, automation scripts, and Azure DevOps
-                            for CI/CD.</li>
-                        <li>Co-designed a fleet management dashboard for telemetry and data usage.</li>
-                        <li>Developed custom drivers and ROS interfaces for STM32-based peripheral control subsystems.
-                        </li>
-                    </ul>
-                </div>
-                <div class="timeline-middle">
-                    <div class="timeline-circle"></div>
-                </div>
-                <div class="timeline-empty">
-                </div>
-
-                <div class="timeline-empty">
-                </div>
-                <div class="timeline-middle">
-                    <div class="timeline-circle"></div>
-                </div>
-                <div class="timeline-component timeline-content">
-                    <h4>2024 Apr - 2024 Sep</h4>
-                    <h3>Robotics Field Engineer</h3>
-                    <h4 style="margin-top: 5px; color: #ddff8f;">Relay Robotics</h4>
-                    <ul>
-                        <li>Conducted on-site troubleshooting and diagnosis of network and system issues and coordinated
-                            deployments with internal teams.</li>
-                        <li>Provided training and technical support to end-users, in operating and maintaining deployed
-                            systems.</li>
-                    </ul>
-                </div>
-
-                <div class="timeline-component timeline-content right-just">
-                    <h4>2023 Jan - 2024 Sep</h4>
-                    <h3>Research Intern - Clemson University</h3>
-                    <ul>
-                        <li>Collaboratively developed an off-road dataset that identifies area of traversability in
-                            high-speed autonomous vehicle setting sponsored by VIPR-GS, US Army</li>
-                        <li>Led development of robust annotating software using C++, Win32 API and OpenCV and reduced
-                            annotation time by 97%</li>
-                        <li>Deployed ROS tool-chain to capture high-resolution videos and used Python and FFmpeg to
-                            create a comprehensive traversable dataset for off-road terrains.</li>
-                        <li>Implemented a video input neural network, enabling precise identification and navigation of
-                            unexplored and challenging off-road terrains, such as dense forests and uncharted terrains.
-                        </li>
-                    </ul>
-                </div>
-                <div class="timeline-middle">
-                    <div class="timeline-circle"></div>
-                </div>
-                <div class="timeline-empty">
-                </div>
-                <div class="timeline-empty">
-                </div>
-                <div class="timeline-middle">
-                    <div class="timeline-circle"></div>
-                </div>
-                <div class="timeline-component timeline-content">
-                    <h4>2021 Sep - 2022 Dec</h4>
-                    <h3>Research Assistant - Clemson University</h3>
-                    <ul>
-                        <li>Experienced in ROS deployment for robotic platforms like Clearpath Husky, Jackal, and
-                            Turtlebot3 for testing and validation.</li>
-                        <li>Demonstrated application of control techniques in simulation environments such as Gazebo,
-                            CoppeliaSim, and Project Chrono to develop and validate on wheeled mobile robotic platforms.
-                        </li>
-                        <li>Conducted HIL and SIL testing for navigation algorithms in mobile robots for robustness and
-                            reliability in real-world scenarios.</li>
-                    </ul>
-                </div>
-                <div class=" timeline-component timeline-content">
-                    <h4>2020 Jul - 2021 Jun</h4>
-                    <h3>Research Assistant - Kasturba Medical College</h3>
-                    <ul>
-                        <li>Implemented deep learning models to extract patterns and established data analysis
-                            protocols.</li>
-                        <li>Developed software in MATLAB to analyze data points and visualize the results using
-                            matplotlib, decreasing inference and turnaround time by 65%.</li>
-                        <li>Established a protocol with bash script and MATLAB to ingest, analyze and extract videos for
-                            research.</li>
-                    </ul>
-                </div>
-                <div class="timeline-middle">
-                    <div class="timeline-circle"></div>
-                </div>
-                <div class="timeline-empty">
-                </div>
-                <div class="timeline-empty">
-                </div>
-
-                <div class="timeline-middle">
-                    <div class="timeline-circle"></div>
-                </div>
-
-                <div class="timeline-component timeline-content">
-                    <h4>2017 Aug - 2019 Jun</h4>
-                    <h3>Assistant Manager - Essar Projects India Ltd.</h3>
-                    <ul>
-                        <li>Led a team of 5 engineers as an Engineer consultant for a $6 million project.</li>
-                        <li>Orchestrated and directed cross-functional teams comprising design professionals,
-                            contractors, and site personnel.</li>
-                    </ul>
-                </div>
-                <!-- <div class="timeline-middle-last">
-                <div class="timeline-circle"></div>
-            </div> -->
+        <div class="timeline">
+            <!-- Row 1 -->
+            <div class="timeline-component timeline-content">
+                <h4>2025 Jan - Present</h4>
+                <h3>Robotics Software Engineer</h3>
+                <h4 style="color: var(--accent-color);">Technosoft Engineering</h4>
+                <ul>
+                    <li>Designed and stabilized industrial AMR autonomy stacks using ROS/ROS2.</li>
+                    <li>Architected production-grade workflows using systemd and Azure DevOps for CI/CD.</li>
+                    <li>Developed custom drivers and ROS interfaces for STM32 subsystems.</li>
+                </ul>
             </div>
-        </section>
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+            <div class="timeline-empty"></div>
+
+            <!-- Row 2 -->
+            <div class="timeline-empty"></div>
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+            <div class="timeline-component timeline-content">
+                <h4>2024 Apr - 2024 Sep</h4>
+                <h3>Robotics Field Engineer</h3>
+                <h4 style="color: var(--accent-color);">Relay Robotics</h4>
+                <ul>
+                    <li>Conducted on-site troubleshooting and diagnosis of network and system issues.</li>
+                    <li>Provided training and technical support to end-users on deployed systems.</li>
+                </ul>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="timeline-component timeline-content">
+                <h4>2023 Jan - 2024 Sep</h4>
+                <h3>Research Intern</h3>
+                <h4 style="color: var(--accent-color);">Clemson University</h4>
+                <ul>
+                    <li>Developed US Army sponsored off-road dataset for high-speed autonomy.</li>
+                    <li>Led development of C++/OpenCV annotation tool, reducing time by 97%.</li>
+                    <li>Implemented video neural networks for unexplored terrain navigation.</li>
+                </ul>
+            </div>
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+            <div class="timeline-empty"></div>
+        </div>
     </div>
 
-    <div id="projects">
+    <div id="projects" class="section-container">
         <h1 id="project">Projects</h1>
         <div id="second-slide">
 
