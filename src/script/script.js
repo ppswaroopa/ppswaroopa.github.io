@@ -5,109 +5,112 @@ function goup() {
   });
 }
 
-function on(a) {
-  switch (a) {
-    case 1:
-      document.getElementById("sev-wea-det").style.display = "flex";
-      break;
-    case 2:
-      document.getElementById("autobot-det").style.display = "flex";
-      break;
-    case 3:
-      document.getElementById("astar-det").style.display = "flex";
-      break;
-    case 4:
-      document.getElementById("agrawal-lab-det").style.display = "flex";
-      break;
-    case 5:
-      document.getElementById("off-road-det").style.display = "flex";
-      break;
-    case 6:
-      document.getElementById("sysmon-det").style.display = "flex";
-      break;
-    case 7:
-      document.getElementById("snakegame-det").style.display = "flex";
-      break;
-    default:
-      break;
-  }
-  document.querySelector('body').style.overflow = "hidden";
-  if (screen.availWidth > 481) {
-    document.getElementById('navbar').style.display = "none";
-  }
-}
+function renderProjects() {
+  const grid = document.getElementById('projects-grid');
+  if (!grid) return;
 
-function off(b) {
-  switch (b) {
-    case 1:
-      document.getElementById("sev-wea-det").style.display = "none";
-      break;
-    case 2:
-      document.getElementById("autobot-det").style.display = "none";
-      break;
-    case 3:
-      document.getElementById("astar-det").style.display = "none";
-      break;
-    case 4:
-      document.getElementById("agrawal-lab-det").style.display = "none";
-      break;
-    case 5:
-      document.getElementById("off-road-det").style.display = "none";
-      break;
-    case 6:
-      document.getElementById("sysmon-det").style.display = "none";
-      break;
-    case 7:
-      document.getElementById("snakegame-det").style.display = "none";
-      break;
-    default:
-      break;
-  }
-  document.querySelector('body').style.overflow = "auto";
-  if (screen.availWidth > 481) {
-    document.getElementById('navbar').style.display = "block";
-  }
-  // document.getElementById('navbar').style.display = "block";
-}
+  grid.innerHTML = projects.map(project => `
+        <div class="project" data-id="${project.id}">
+            <img src="${project.cardImage || project.image}" alt="${project.title}">
+            <h3>${project.title}</h3>
+        </div>
+    `).join('');
 
-const navLinks = document.querySelectorAll('.navbar a');
-
-navLinks.forEach(link => {
-  link.addEventListener('click', event => {
-    event.preventDefault(); // Prevent default link behavior
-    const targetSectionId = link.getAttribute('href');
-    const targetSection = document.querySelector(targetSectionId);
-    if (targetSection) {
-      // navbar.classList.toggle("active");
-      // Calculate the scroll position of the target section
-      targetOffset = targetSection.offsetTop;
-      // Scroll to the target section with smooth behavior
-      window.scrollTo({
-        top: targetOffset,
-        behavior: 'smooth'
-      });
-
-    }
+  // Add click listeners
+  document.querySelectorAll('.project').forEach(card => {
+    card.addEventListener('click', () => {
+      openModal(card.getAttribute('data-id'));
+    });
   });
-});
+}
+
+function openModal(id) {
+  const project = projects.find(p => p.id === id);
+  if (!project) return;
+
+  const modal = document.getElementById('project-modal');
+  document.getElementById('modal-title').innerText = project.title;
+  document.getElementById('modal-image').src = project.image;
+
+  const highlightsList = document.getElementById('modal-highlights');
+  highlightsList.innerHTML = project.highlights.map(h => `<li>${h}</li>`).join('');
+
+  const linksContainer = document.getElementById('modal-links');
+  if (project.links && project.links.length > 0) {
+    linksContainer.innerHTML = project.links.map(link => `
+            <a href="${link.url}" target="_blank" class="logo">
+                <i class="fa-brands fa-${link.type} fa-3x" style="color: #ffffff; padding-right: 20px;"></i>
+            </a>
+        `).join('');
+    linksContainer.style.display = 'block';
+  } else {
+    linksContainer.style.display = 'none';
+  }
+
+  document.getElementById('modal-tools').innerHTML = `<b>Tools</b>: ${project.tools}`;
+
+  const descEl = document.getElementById('modal-description');
+  if (project.description) {
+    descEl.innerText = project.description;
+    descEl.style.display = 'block';
+  } else {
+    descEl.style.display = 'none';
+  }
+
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  if (window.innerWidth > 481) {
+    document.getElementById('navbar').style.display = 'none';
+  }
+}
+
+function closeModal() {
+  const modal = document.getElementById('project-modal');
+  if (modal) {
+    modal.style.display = 'none';
+  }
+  document.body.style.overflow = 'auto';
+  if (window.innerWidth > 481) {
+    document.getElementById('navbar').style.display = 'block';
+  }
+}
+
+// Support closing by clicking outside or close button already handled by onclick in HTML
+window.onclick = function (event) {
+  const modal = document.getElementById('project-modal');
+  if (event.target == modal) {
+    closeModal();
+  }
+}
+
 
 document.addEventListener("DOMContentLoaded", function (event) {
-  const menuToggle = document.getElementById("menu-toggle");
-  const navbar = document.getElementById('navbar');
-  const burger = document.querySelectorAll('.nav-links a');
-  const go_up = document.getElementById('go_up_button');
+  renderProjects();
 
-  // console.log(burger);
-  menuToggle.addEventListener("click", () => {
-    // console.log("we good till here");
-    navbar.classList.toggle("active");
+  const navLinks = document.querySelectorAll('.navbar a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      const targetSectionId = link.getAttribute('href');
+      const targetSection = document.querySelector(targetSectionId);
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    });
   });
 
-  burger.forEach(link => {
-    link.addEventListener('click', event => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const navbar = document.getElementById('navbar');
+  const go_up = document.getElementById('go_up_button');
+
+  if (menuToggle) {
+    menuToggle.addEventListener("click", () => {
       navbar.classList.toggle("active");
-    })
-  })
+    });
+  }
 
   // Scroll Reveal Animation
   const observerOptions = {
@@ -143,5 +146,3 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   });
 });
-
-

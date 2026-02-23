@@ -10,15 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="src/css/style.css?v=2">
     <link rel="icon" type="image/x-icon" href="src/images/Profile_Image.png">
+    <script type="text/javascript" src="src/script/projects.js"></script>
     <script type="text/javascript" src="src/script/script.js"></script>
     <script src="https://kit.fontawesome.com/f0de5b417b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-    <div class="menu-toggle" id="menu-toggle">
-        <i class="fa-solid fa-bars fa-2xl"></i>
-    </div>
+
     <div class="navbar" id="navbar">
         <div class="nav-links">
             <a href="#first-slide">Introduction</a>
@@ -163,270 +162,82 @@
                 <div class="timeline-circle"></div>
             </div>
             <div class="timeline-empty"></div>
+
+            <!-- Row 4 -->
+            <div class="timeline-empty"></div>
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+            <div class="timeline-component timeline-content">
+                <h4>2021 Sep - 2022 Dec</h4>
+                <h3>Research Assistant</h3>
+                <h4 style="color: var(--accent-color);">Clemson University</h4>
+                <ul>
+                    <li>Deployed ROS on robotic platforms (Husky, Jackal, Turtlebot3) for validation.</li>
+                    <li>Validated control techniques in Gazebo, CoppeliaSim, and Project Chrono simulations.</li>
+                    <li>Conducted HIL/SIL testing for robust navigation algorithms.</li>
+                </ul>
+            </div>
+
+            <!-- Row 5 -->
+            <div class="timeline-component timeline-content">
+                <h4>2020 Jul - 2021 Jun</h4>
+                <h3>Research Assistant</h3>
+                <h4 style="color: var(--accent-color);">Kasturba Medical College</h4>
+                <ul>
+                    <li>Implemented deep learning models and data analysis protocols for medical research.</li>
+                    <li>Developed MATLAB visualization tools, reducing turnaround time by 65%.</li>
+                    <li>Automated video ingestion and analysis using Bash and MATLAB scripts.</li>
+                </ul>
+            </div>
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+            <div class="timeline-empty"></div>
+
+            <!-- Row 6 -->
+            <div class="timeline-empty"></div>
+            <div class="timeline-middle">
+                <div class="timeline-circle"></div>
+            </div>
+            <div class="timeline-component timeline-content">
+                <h4>2017 Aug - 2019 Jun</h4>
+                <h3>Assistant Manager</h3>
+                <h4 style="color: var(--accent-color);">Essar Projects India Ltd.</h4>
+                <ul>
+                    <li>Led a team of 5 engineers for a $6 million industrial project.</li>
+                    <li>Coordinated cross-functional teams including design, contractors, and site personnel.</li>
+                </ul>
+            </div>
         </div>
     </div>
 
     <div id="projects" class="section-container">
         <h1 id="project">Projects</h1>
-        <div id="second-slide">
-
-            <div class="project" id="off-road" onclick="on(5)">
-                <img src="src/images/offroad.gif">
-                <h3>Off Road Autonomy</h3>
-            </div>
-
-            <div class="project" id="sev-wea" onclick="on(1)">
-                <img src="src/images/severe.gif">
-                <h3>Drivable Area Detection under Severe Weather</h3>
-            </div>
-
-            <div class="project" id="autobot" onclick="on(2)">
-                <img src="src/images/auto_bot.gif">
-                <h3>Autonomous Turtlebot</h3>
-            </div>
-
-            <div class="project" id="astar" onclick="on(3)">
-                <img src="src/images/ND_aStar.png">
-                <h3>A* Route Planner</h3>
-            </div>
-
-            <div class="project" id="sysmon" onclick="on(6)">
-                <img src="src/images/sysmon.png">
-                <h3>Linux System Monitor</h3>
-            </div>
-
-            <div class="project" id="snakegame" onclick="on(7)">
-                <img src="src/images/snakegame.gif">
-                <h3>Snake Game</h3>
-            </div>
-
-            <div class="project" id="agrawal-lab" onclick="on(4)">
-                <img src="src/images/agrawal-lab.png">
-                <h3>Wed Development</h3>
-            </div>
-
+        <div id="projects-grid">
+            <!-- Projects will be dynamically injected here -->
         </div>
 
-        <div class="project-details" id="off-road-det" onclick="off(5)">
+        <!-- Single Project Modal Template -->
+        <div class="project-details" id="project-modal">
             <div class="project-details-left">
-                <h2>Off Road Autonomy</h2>
-                <img src="src/images/offroad.gif">
+                <h2 id="modal-title">Project Title</h2>
+                <img id="modal-image" src="" alt="Project Image">
             </div>
             <div class="project-details-right">
-                <div class="close_button">
+                <div class="close_button" onclick="closeModal()">
                     <i class="fa-regular fa-circle-xmark fa-2xl" style="color: #ffffff;"></i>
                 </div>
                 <h3>Highlights</h3>
-                <ul>
-                    <li>PI: Dr Adam Hoover, Holcombe Department of Electrical and Computer Engineering, Clemson
-                        Univeristy</li>
-                    <li>Video based neural network</li>
-                    <li>Dataset generation from Clemson Experimental Forest</li>
-                    <li>Annotation and developing CNN pipeline</li>
+                <ul id="modal-highlights">
+                    <!-- Highlights injected here -->
                 </ul>
-                <!-- <a href="https://github.com/ppswaroopa/Lane-Detection-In-Foggy-Weather" target="_blank" style="padding-right: 3%; text-decoration: none;">
-                <i class="fa-brands fa-github fa-3x" style="color: #ffffff;"></i>
-            </a>
-            <a href="https://youtu.be/N1VKDhaKGTs" target="_blank">
-                <i class="fa-brands fa-youtube fa-3x" style="color: #ffffff;"></i>
-            </a> -->
-                <p><b>Tools</b>: Python, C++, OpenCV, TensorFlow, HPC</p>
-            </div>
-        </div>
-
-
-        <div class="project-details" id="sev-wea-det" onclick="off(1)">
-            <div class="project-details-left">
-                <h2>Drivable Area Detection in Severe Weather</h2>
-                <img src="src/images/severe_sq.png">
-            </div>
-            <div class="project-details-right">
-                <div class="close_button">
-                    <i class="fa-regular fa-circle-xmark fa-2xl" style="color: #ffffff;"></i>
+                <div id="modal-links">
+                    <!-- Links injected here -->
                 </div>
-                <h3>Highlights</h3>
-                <ul>
-                    <li>Team of 3</li>
-                    <li>20 Layer DNN Network</li>
-                    <li>Encoder-Decorder configuration</li>
-                    <li>15.6K selected images from BDD100K dataset</li>
-                    <li>Pipeline developed that can process a given video and recognize and draw drivable area in it
-                    </li>
-                    <li>Built with Palmetto HPC - Clemson Univerisity</li>
-                    <li>Acheived mIOU = 44.15%</li>
-                </ul>
-                <a href="https://github.com/ppswaroopa/Lane-Detection-In-Foggy-Weather" target="_blank"
-                    style="padding-right: 3%; text-decoration: none;">
-                    <!-- <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/> -->
-                    <i class="fa-brands fa-github fa-3x" style="color: #ffffff;"></i>
-                </a>
-                <a href="https://youtu.be/N1VKDhaKGTs" target="_blank">
-                    <!-- <img src="src/images/youtube_social_icon_dark.png" width="55px"> -->
-                    <i class="fa-brands fa-youtube fa-3x" style="color: #ffffff;"></i>
-                </a>
-                <p><b>Tools</b>: Python, OpenCV, TensorFlow, HPC, Jupyer Notebook</p>
-                <p>
-                    We wanted to develop a neural network that helps vehicles find traversable/ drivable path where the
-                    weather is not ideal.
-                    Initial thought was can we develop something that is simple in implementation but shows good
-                    accuracy. This was done as
-                    part of course credit and which meant we had only a month of time to select dataset, develop a
-                    network and tune it. We
-                    developed a simple Encoder-Decorder network and selected BDD100K as our dataset. To concentrate our
-                    training we selected
-                    images tagged with weather conditions like rainy, foggy, snowy, and cloudy. We acheived a mIOU =
-                    44.15%.
-                </p>
+                <p id="modal-tools"><b>Tools</b>: ...</p>
+                <p id="modal-description"></p>
             </div>
-        </div>
-
-        <div class="project-details" id="autobot-det" onclick="off(2)">
-            <div class="project-details-left">
-                <h2>Autonomous Turtlebot</h2>
-                <img src="src/images/auto_bot.gif">
-            </div>
-            <div class="project-details-right">
-                <div class="close_button">
-                    <i class="fa-regular fa-circle-xmark fa-2xl" style="color: #ffffff;"></i>
-                </div>
-                <h3>Highlights</h3>
-                <ul>
-                    <li>Lead the Team of 4</li>
-                    <li>Developed PID controllers to use LIDAR data to keep the robot away from all obstacles and be at
-                        the center</li>
-                    <li>Using camera images, developed a PID controller to follow a line on the track and used miniYOLO
-                        to analyze and
-                        respond to a STOP sign.</li>
-                    <li>Implemented a cron job to get useful data sent before every test, which resulted in a faster
-                        testing schedule.</li>
-                    <li>For successfully implementing the project, received the highest grade in the class</li>
-                </ul>
-                <a href="https://github.com/ppswaroopa/Aue8230Spring2022_Group7/tree/main/group7_ws/src/auefinals"
-                    target="_blank" style="padding-right: 3%; text-decoration: none;">
-                    <!-- <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/> -->
-                    <i class="fa-brands fa-github fa-3x" style="color: #ffffff;"></i>
-                </a>
-                <a href="https://youtu.be/YXchdEtqzsE" target="_blank">
-                    <!-- <img src="src/images/youtube_social_icon_dark.png" width="55px" alt="Project Demo"> -->
-                    <i class="fa-brands fa-youtube fa-3x" style="color: #ffffff;"></i>
-                </a>
-                <p><b>Tools</b>: Python, ROS, OpenCV, miniYOLO, Raspberry Pi, Ubuntu</p>
-            </div>
-        </div>
-
-        <div class="project-details" id="astar-det" onclick="off(3)">
-            <div class="project-details-left">
-                <h2>A* Route Planner</h2>
-                <img src="src/images/ND_aStar.png">
-            </div>
-            <div class="project-details-right">
-                <div class="close_button">
-                    <i class="fa-regular fa-circle-xmark fa-2xl" style="color: #ffffff;"></i>
-                </div>
-                <h3>Highlights</h3>
-                <ul>
-                    <li>Project built in Ubuntu Linux</li>
-                    <li>Uses maps from OpenStreetMap library</li>
-                    <li>Implemented core logic using OOP</li>
-                    <li>Part of C++ Nanodegree from Udacity </li>
-                </ul>
-                <a href="https://github.com/ppswaroopa/route_planner_ND" target="_blank"
-                    style="padding-right: 3%; text-decoration: none;">
-                    <!-- <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/> -->
-                    <i class="fa-brands fa-github fa-3x" style="color: #ffffff;"></i>
-                </a>
-                <!-- <a href="https://youtu.be/YXchdEtqzsE" target="_blank">
-                <img src="src/images/youtube_social_icon_dark.png" width="55px" alt="Project Demo">
-            </a> -->
-                <p><b>Tools</b>: C++, CMake, OpenStreetMap, Ubuntu</p>
-            </div>
-        </div>
-
-        <div class="project-details" id="agrawal-lab-det" onclick="off(4)">
-            <div class="project-details-left">
-                <h2>Agrawal Lab Website Project</h2>
-                <img src="src/images/agrawal-lab.png">
-            </div>
-            <div class="project-details-right">
-                <div class="close_button">
-                    <i class="fa-regular fa-circle-xmark fa-2xl" style="color: #ffffff;"></i>
-                </div>
-                <h3>Highlights</h3>
-                <ul>
-                    <li>Website built and hosted with Wix</li>
-                    <li>Made in mind with ease of maintenance</li>
-                    <li>Visit at <a href="https://www.agrawallab.com/" target="_blank"
-                            style="text-decoration: underline; color: inherit;">agrawallab.com</a></li>
-                </ul>
-                <p><b>Tools</b>: WIX, HTML, CSS, JS</p>
-                <p>This is the public facing lab website I created when I was working for Agrawal Lab as a Research
-                    Assistant. Agrawal Lab is a neuroscience
-                    lab focused on Drosophila Melanogaster. I also developed websites for internal use in Microsoft
-                    Sharepoint.
-                </p>
-            </div>
-        </div>
-    </div>
-    <!-- <div class="vertical-line"></div>
-    <div class="dot">HOW</div> -->
-
-    <div class="project-details" id="sysmon-det" onclick="off(6)">
-        <div class="project-details-left">
-            <h2>Linux System Monitor</h2>
-            <img src="src/images/sysmon.png">
-        </div>
-        <div class="project-details-right">
-            <div class="close_button">
-                <i class="fa-regular fa-circle-xmark fa-2xl" style="color: #ffffff;"></i>
-            </div>
-            <h3>Highlights</h3>
-            <ul>
-                <li>Developed in C++</li>
-                <li>Program mimics implementation of htop/top in linux.</li>
-                <li>Details are parsed from different files stored in the linux filesystem.</li>
-                <li>Goal: To understand how system data is stored in linux 'proc' directory.</li>
-                <li>Understand reading from a file and parsing data.</li>
-            </ul>
-            <a href="https://github.com/ppswaroopa/Linux-System-Monitor" target="_blank"
-                style="padding-right: 3%; text-decoration: none;">
-                <!-- <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/> -->
-                <i class="fa-brands fa-github fa-3x" style="color: #ffffff;"></i>
-            </a>
-            <p><b>Tools</b>: C++, CMake, Ubuntu</p>
-            <p>
-
-            </p>
-        </div>
-    </div>
-
-    <div class="project-details" id="snakegame-det" onclick="off(7)">
-        <div class="project-details-left">
-            <h2>Snake Game (Improvised)</h2>
-            <img src="src/images/snakegame.gif">
-        </div>
-        <div class="project-details-right">
-            <div class="close_button">
-                <i class="fa-regular fa-circle-xmark fa-2xl" style="color: #ffffff;"></i>
-            </div>
-            <h3>Highlights</h3>
-            <ul>
-                <li>Developed in C++</li>
-                <li>Improvised implementation of the classic Snake Game</li>
-                <li>Goal: To develop a game while using all OOP concepts</li>
-                <li>Understand and implement Game Design Pattern</li>
-                <li>Using OOP implementation like data encapsulation, polymorphism and abstraction.</li>
-                <li>Making sure unnecessary duplication of data by the use of pointers</li>
-                <li>Use of multithreading to make use of multi-core CPU capabilities.</li>
-            </ul>
-            <a href="https://github.com/ppswaroopa/Snake-Game" target="_blank"
-                style="padding-right: 3%; text-decoration: none;">
-                <!-- <img src="src/images/github-mark-white.svg" alt="Github Project Link" width="40px"/> -->
-                <i class="fa-brands fa-github fa-3x" style="color: #ffffff;"></i>
-            </a>
-            <p><b>Tools</b>: C++, CMake, Ubuntu</p>
-            <p>
-
-            </p>
         </div>
     </div>
     <div class="go_up_button" id="go_up_button" onclick="goup()">
