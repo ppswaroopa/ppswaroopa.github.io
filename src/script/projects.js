@@ -100,17 +100,17 @@ const projects = [
         ],
         tools: "C++, CMake, Ubuntu"
     },
-    {
-        id: "agrawal-lab",
-        title: "Web Development",
-        image: "src/images/agrawal-lab.png",
-        cardImage: "src/images/agrawal-lab.png",
-        highlights: [
-            "Public lab website for Agrawal Lab (neuroscience)",
-            "Built with emphasis on ease of maintenance",
-            "Developed internal tools using SharePoint as well"
-        ],
-        tools: "WIX, HTML, CSS, JS",
-        description: "Public-facing website created for Agrawal Lab, focused on Drosophila Melanogaster research. Visit at agrawallab.com"
-    }
+    // {
+    //     id: "agrawal-lab",
+    //     title: "Web Development",
+    //     image: "src/images/agrawal-lab.png",
+    //     cardImage: "src/images/agrawal-lab.png",
+    //     highlights: [
+    //         "Public lab website for Agrawal Lab (neuroscience)",
+    //         "Built with emphasis on ease of maintenance",
+    //         "Developed internal tools using SharePoint as well"
+    //     ],
+    //     tools: "WIX, HTML, CSS, JS",
+    //     description: "Public-facing website created for Agrawal Lab, focused on Drosophila Melanogaster research. Visit at agrawallab.com"
+    // }
 ];

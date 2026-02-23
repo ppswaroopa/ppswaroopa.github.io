@@ -25,6 +25,7 @@ body {
     padding: 0;
     color: var(--text-primary);
     overflow-x: hidden;
+    width: 100%;
 }
 
 /* --- Layout Utility --- */
@@ -32,6 +33,7 @@ body {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 5%;
+    box-sizing: border-box;
 }
 
 /* --- Premium Navbar --- */
@@ -51,6 +53,7 @@ body {
     gap: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     width: fit-content;
+    white-space: nowrap;
 }
 
 .navbar a {
@@ -143,6 +146,7 @@ body {
     border-radius: 40px;
     padding: 25px;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
 }
 
 #about {
@@ -216,10 +220,6 @@ button:hover {
     text-transform: uppercase;
 }
 
-.design-section {
-    padding: 20px 0 100px 0;
-}
-
 .timeline {
     width: 100%;
     max-width: 1000px;
@@ -249,6 +249,7 @@ button:hover {
     padding: 30px;
     margin-bottom: 40px;
     transition: all 0.4s ease;
+    box-sizing: border-box;
 }
 
 .timeline-content:hover {
@@ -315,11 +316,12 @@ button:hover {
 
 #projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 5%;
+    box-sizing: border-box;
 }
 
 .project {
@@ -329,6 +331,8 @@ button:hover {
     overflow: hidden;
     cursor: pointer;
     transition: all 0.5s ease;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .project:hover {
@@ -374,11 +378,11 @@ button:hover {
     border-radius: 40px;
     z-index: 1000;
     display: none;
-    /* Flex when active */
     padding: 50px;
     overflow-y: auto;
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
     gap: 40px;
+    box-sizing: border-box;
 }
 
 .project-details-left {
@@ -480,7 +484,7 @@ body::before {
 
 /* --- Footer & Scroll Up --- */
 footer {
-    padding: 80px 0;
+    padding: 30px 0;
     background: transparent;
     border-top: 1px solid var(--glass-border);
     color: var(--text-secondary);
@@ -526,52 +530,111 @@ footer {
 
 /* --- Mobile Refinement --- */
 @media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    .section-container {
+        padding: 0 20px;
+        overflow-x: hidden;
+    }
+
     #first-slide {
         flex-direction: column;
         padding-top: 100px;
         gap: 40px;
+        min-height: auto;
     }
 
     #profile-message {
         align-items: center;
         text-align: center;
+        width: 100%;
     }
 
     #profile-image {
-        width: 220px;
-        height: 220px;
+        width: 180px;
+        height: 180px;
+    }
+
+    #name {
+        font-size: 32px;
     }
 
     .info {
         border-radius: 30px;
-        padding: 30px;
+        padding: 20px;
         width: 100%;
+        margin: 0;
+    }
+
+    .info table td:first-child {
+        width: 100px;
     }
 
     .timeline {
-        grid-template-columns: 2px 1fr;
-        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding-left: 25px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
-    .timeline-empty {
-        display: none;
+    .timeline::before {
+        left: 5px;
+        transform: none;
+    }
+
+    .timeline-middle {
+        position: absolute;
+        left: -1px;
+        z-index: 10;
+        width: 12px;
+    }
+
+    .timeline-circle {
+        margin-top: 35px;
+    }
+
+    .timeline-content {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 25px;
+        font-size: 14px;
     }
 
     .navbar {
-        width: 90%;
+        width: calc(100% - 40px);
         bottom: 20px;
         top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 5px 10px;
+        justify-content: center;
     }
 
     .navbar a {
-        padding: 10px 12px;
-        font-size: 12px;
+        padding: 8px 10px;
+        font-size: 11px;
+    }
+
+    #projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0;
+        width: 100%;
+    }
+
+    .project {
+        width: 100%;
     }
 
     /* Project Modal Mobile */
     .project-details {
         flex-direction: column !important;
-        padding: 60px 25px 30px 25px;
+        padding: 60px 20px 30px 20px;
         top: 0;
         left: 0;
         transform: none;
