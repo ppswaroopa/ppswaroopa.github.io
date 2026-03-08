@@ -48,6 +48,7 @@ jobs:
       # Xvfb provides a virtual display so GUI binaries can start
       - name: Start Xvfb virtual display
         run: |
+          sudo apt-get update
           sudo apt-get install -y xvfb
           Xvfb :99 -screen 0 1024x768x24 &
           echo "DISPLAY=:99" >> $GITHUB_ENV
