@@ -167,6 +167,50 @@ jobs:
     with:
       distro: humble
 
+  # ── Kitchen Sink — Tests ALL packages and tools at once ──────
+  # Ensures there are no apt-get conflicts between various tools
+  # or ROS2 packages (e.g. RMW conflicts or GUI lib overlaps).
+  kitchen-sink:
+    name: "Kitchen Sink (All tools/pkgs)"
+    needs: changes
+    if: |
+      needs.changes.outputs.generator == 'true' ||
+      github.event.inputs.run_all == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Generate Dockerfile (The Everything Config)
+        run: |
+          node ci/generate.js \
+            --distro   humble \
+            --variant  desktop-full \
+            --packages "nav2,slam_toolbox,cartographer,gazebo,rviz2,turtlebot3,moveit2,ros2_control,pcl,cv_bridge,tf2,cyclone_dds" \
+            --tools    "colcon,rosdep,python3,git,cmake,nano,tmux,gdb,net_tools,vcstool,ssh,x11,zsh,bashrc,locale,sudo" \
+            --username ros-dev \
+            --uid      1000 \
+            --out      ./build-context
+      - name: Validate Compose YAML
+        run: docker compose -f ./build-context/docker-compose.yml config --quiet
+      - uses: docker/setup-buildx-action@v3
+      - name: Build image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./build-context
+          push: false
+          load: true
+          tags: ros2-kitchen-sink:ci
+      - name: Validate
+        run: |
+          docker run --rm \
+            -e ROS_DISTRO=humble \
+            -e CI_TEST_SUITE=build-tools \
+            -v "${{ github.workspace }}/ci/validate.sh:/validate.sh:ro" \
+            ros2-kitchen-sink:ci \
+            bash /validate.sh
+
   # ── Final gate — required for branch protection ──────────────
   # This job always runs and checks which of the above actually
   # ran. If something ran and failed, this fails. If a job was
@@ -183,6 +227,7 @@ jobs:
       - user-setup
       - gui
       - nvidia
+      - kitchen-sink
 
     steps:
       - name: Check results
@@ -194,6 +239,7 @@ jobs:
           results[user-setup]="${{ needs.user-setup.result }}"
           results[gui]="${{ needs.gui.result }}"
           results[nvidia]="${{ needs.nvidia.result }}"
+          results[kitchen-sink]="${{ needs.kitchen-sink.result }}"
 
           FAILED=0
           for job in "${!results[@]}"; do

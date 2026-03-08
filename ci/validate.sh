@@ -174,6 +174,48 @@ run_build_tools() {
   else
     skip "vcs not installed (optional)"
   fi
+
+  check_colcon_build
+}
+
+check_colcon_build() {
+  section "colcon build test (E2E)"
+  source "/opt/ros/${DISTRO}/setup.bash" 2>/dev/null || true
+  
+  local tmpdir
+  tmpdir=$(mktemp -d)
+  mkdir -p "$tmpdir/src/test_pkg"
+  
+  # Create a minimal package.xml and CMakeLists.txt
+  cat > "$tmpdir/src/test_pkg/package.xml" <<EOF
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>test_pkg</name>
+  <version>0.0.0</version>
+  <description>CI Test Package</description>
+  <maintainer email="ci@test.com">CI</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+</package>
+EOF
+
+  cat > "$tmpdir/src/test_pkg/CMakeLists.txt" <<EOF
+cmake_minimum_required(VERSION 3.8)
+project(test_pkg)
+find_package(ament_cmake REQUIRED)
+ament_package()
+EOF
+
+  pushd "$tmpdir" &>/dev/null
+  if colcon build --event-handlers console_cohesion+ &>/tmp/colcon.log; then
+    pass "colcon build minimal package → OK"
+  else
+    fail "colcon build minimal package → FAILED (see /tmp/colcon.log)"
+    cat /tmp/colcon.log
+  fi
+  popd &>/dev/null
+  rm -rf "$tmpdir"
 }
 
 # =============================================================
