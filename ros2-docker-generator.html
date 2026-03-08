@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ROS2 Docker Generator — Get Robotics Running Fast</title>
+  <title>ROS2 Docker Generator v1.0 — Get Robotics Running Fast</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap"
     rel="stylesheet">
@@ -201,6 +201,7 @@
       margin: 48px 0 56px;
       flex-wrap: wrap;
       gap: 4px;
+      scroll-margin-top: 100px;
     }
 
     .step-dot {
@@ -580,7 +581,7 @@
 
     .toggle-row.on .toggle-switch {
       background: rgba(0, 255, 136, 0.3);
-      border: 1px solid var(--green);
+      box-shadow: 0 0 0 1px var(--green) inset;
     }
 
     .toggle-row.on .toggle-switch::after {
@@ -874,6 +875,8 @@
       background: var(--surface);
       padding: 24px;
       position: relative;
+      display: flex;
+      flex-direction: column;
     }
 
     .qs-num {
@@ -906,10 +909,10 @@
       border: 1px solid var(--border);
       color: var(--green);
       padding: 8px 12px;
-      margin-top: 12px;
+      margin-top: auto;
       display: block;
-      overflow-x: auto;
-      white-space: nowrap;
+      white-space: pre-wrap;
+      word-break: break-word;
     }
 
     /* FOOTER */
@@ -1043,9 +1046,9 @@
       <div class="nav-inner">
         <div class="logo"><a href="index.html"
             style="text-decoration: none; color: inherit;">ros2<span>/</span>docker<span>-</span>gen</a> <span
-            style="color:var(--green)">▸</span></div>
+            style="color:var(--green)">v1.0</span></div>
         <div style="display: flex; gap: 20px; align-items: center;">
-          <div class="nav-badge">v1.0 · Humble · Jazzy · Iron</div>
+          <div class="nav-badge">v1.0 · Humble · Jazzy · Kilted</div>
           <a href="index.html"
             style="color: var(--text-dim); text-decoration: none; font-family: 'JetBrains Mono', monospace; font-size: 11px; border: 1px solid var(--border-bright); padding: 4px 10px; border-radius: 2px; transition: all 0.2s;"
             onmouseover="this.style.color='var(--green)'; this.style.borderColor='var(--green)'"
@@ -1088,7 +1091,7 @@
         </a>
       </div>
 
-      <a href="#builder" class="hero-cta" onclick="showStep(1)">
+      <a href="#steps-nav" class="hero-cta" onclick="showStep(1, true); return false;">
         ▶ Start Building Your Environment
       </a>
     </div>
@@ -1118,7 +1121,7 @@
         <div class="section-tag">Step 01 — Foundation</div>
         <div class="section-title">Choose your ROS2 Distribution</div>
         <div class="section-desc">Each distro has different support timelines. Humble is the current LTS (supported
-          until 2027). Jazzy is the latest LTS. Iron is a rolling release.</div>
+          until 2027). Jazzy is the latest LTS. Kilted is a rolling release.</div>
       </div>
 
       <div class="divider-label">ROS2 Distribution</div>
@@ -1137,13 +1140,13 @@
           <div class="option-desc">LTS · Ubuntu 24.04<br>Supported until May 2029</div>
           <div class="option-badge rec">Latest LTS</div>
         </div>
-        <div class="radio-card" data-distro="iron" onclick="selectDistro(this)">
+        <div class="radio-card" data-distro="kilted" onclick="selectDistro(this)">
           <div class="radio-dot"></div>
-          <div class="option-icon">🔩</div>
-          <div class="option-name">Iron Irwini</div>
-          <div class="option-desc">Non-LTS · Ubuntu 22.04<br>EOL Nov 2024 — legacy</div>
+          <div class="option-icon">🪢</div>
+          <div class="option-name">Kilted Kaiju</div>
+          <div class="option-desc">Rolling Release<br>Focus on testing latest features</div>
           <div class="option-badge"
-            style="background:rgba(90,112,128,0.1);color:var(--text-dim);border-color:var(--border-bright);">Legacy
+            style="background:rgba(90,112,128,0.1);color:var(--text-dim);border-color:var(--border-bright);">Rolling
           </div>
         </div>
       </div>
@@ -1176,7 +1179,7 @@
 
       <div class="step-nav">
         <div class="step-progress">Step 1 of 4</div>
-        <button class="btn btn-primary" onclick="showStep(2)">Next: Choose Packages →</button>
+        <button class="btn btn-primary" onclick="showStep(2, true)">Next: Choose Packages →</button>
       </div>
     </div>
 
@@ -1288,7 +1291,7 @@
       <div class="options-grid">
         <div class="option-card" data-pkg="cyclone_dds" onclick="togglePkg(this)">
           <div class="option-check">✓</div>
-          <span class="option-icon">🔗</span>
+          <span class="option-icon">🌪️</span>
           <div class="option-name">CycloneDDS</div>
           <div class="option-desc">Alternative DDS implementation — faster and more reliable for many use cases</div>
           <div class="option-badge rec">Recommended DDS</div>
@@ -1325,8 +1328,8 @@
       </div>
 
       <div class="step-nav">
-        <button class="btn btn-ghost" onclick="showStep(1)">← Back</button>
-        <button class="btn btn-primary" onclick="showStep(3)">Next: Dev Tools →</button>
+        <button class="btn btn-ghost" onclick="showStep(1, true)">← Back</button>
+        <button class="btn btn-primary" onclick="showStep(3, true)">Next: Dev Tools →</button>
       </div>
     </div>
 
@@ -1469,7 +1472,7 @@
       </div>
       <div class="toggle-row" data-tool="zsh" onclick="toggleTool(this)">
         <div class="toggle-info">
-          <span class="toggle-icon">⚡</span>
+          <span class="toggle-icon">🐚</span>
           <div>
             <div class="toggle-label">Zsh + Oh-My-Zsh</div>
             <div class="toggle-sub">Enhanced shell with autocomplete, themes, and ROS2 plugin support</div>
@@ -1479,8 +1482,8 @@
       </div>
 
       <div class="step-nav">
-        <button class="btn btn-ghost" onclick="showStep(2)">← Back</button>
-        <button class="btn btn-primary" onclick="showStep(4)">Next: User Setup →</button>
+        <button class="btn btn-ghost" onclick="showStep(2, true)">← Back</button>
+        <button class="btn btn-primary" onclick="showStep(4, true)">Next: User Setup →</button>
       </div>
     </div>
 
@@ -1568,7 +1571,7 @@
       </div>
       <div class="toggle-row on" data-tool="locale" onclick="toggleTool(this)">
         <div class="toggle-info">
-          <span class="toggle-icon">🌐</span>
+          <span class="toggle-icon">🔤</span>
           <div>
             <div class="toggle-label">Set locale to UTF-8</div>
             <div class="toggle-sub">Prevents ROS2 locale warnings and encoding issues at startup</div>
@@ -1578,8 +1581,8 @@
       </div>
 
       <div class="step-nav">
-        <button class="btn btn-ghost" onclick="showStep(3)">← Back</button>
-        <button class="btn btn-primary" onclick="showStep(5)">Generate Files →</button>
+        <button class="btn btn-ghost" onclick="showStep(3, true)">← Back</button>
+        <button class="btn btn-primary" onclick="showStep(5, true)">Generate Files →</button>
       </div>
     </div>
 
@@ -1636,22 +1639,23 @@
       <!-- QUICK START -->
       <div class="quickstart">
         <div class="section-tag">What's Next</div>
-        <div class="section-title" style="font-size:24px;">Getting Started on Windows</div>
+        <div class="section-title" style="font-size:24px;">Getting Started</div>
+        <div class="section-desc" style="margin-bottom:24px;">If you are on Linux, you can skip steps 1 and 2.</div>
         <div class="qs-steps">
           <div class="qs-step">
             <div class="qs-num">01</div>
-            <div class="qs-title">Install Docker Desktop</div>
-            <div class="qs-text">Download Docker Desktop for Windows. Enable WSL2 backend during setup. It now installs
-              WSL2 + Ubuntu automatically.</div>
-            <a class="qs-cmd" href="https://www.docker.com/products/docker-desktop/" target="_blank">→
-              docker.com/desktop</a>
+            <div class="qs-title">Install Docker</div>
+            <div class="qs-text">Windows: Download Docker Desktop and enable WSL2. Linux: Install Docker Engine
+              natively.</div>
+            <a class="qs-cmd" style="text-decoration:none;" href="https://docs.docker.com/get-docker/"
+              target="_blank">docs.docker.com/get-docker</a>
           </div>
           <div class="qs-step">
             <div class="qs-num">02</div>
-            <div class="qs-title">Get an X Server (for GUI)</div>
-            <div class="qs-text">Install VcXsrv or use the WSLg built-in display support on Windows 11. Required for
-              RViz, Gazebo.</div>
-            <span class="qs-cmd">Windows 11: WSLg is built-in ✓</span>
+            <div class="qs-title">Display Server (GUI)</div>
+            <div class="qs-text">Windows 11 uses WSLg automatically. Older Windows need VcXsrv. Linux runs X11 natively.
+            </div>
+            <span class="qs-cmd">Linux / Win 11: Built-in</span>
           </div>
           <div class="qs-step">
             <div class="qs-num">03</div>
@@ -1683,7 +1687,7 @@
       </div>
 
       <div class="step-nav">
-        <button class="btn btn-ghost" onclick="showStep(4)">← Back</button>
+        <button class="btn btn-ghost" onclick="showStep(4, true)">← Back</button>
         <button class="btn btn-primary" onclick="downloadAll()">⬇ Download Everything</button>
       </div>
     </div>
@@ -1694,7 +1698,8 @@
   <footer>
     <div class="container">
       <div class="footer-text">
-        Built for the ROS2 community · Files generated entirely in your browser — nothing sent to any server<br>
+        ROS2 Docker Generator v1.0 · Built for the ROS2 community · Files generated entirely in your browser — nothing
+        sent to any server<br>
         <a href="https://docs.ros.org/en/humble/" target="_blank">ROS2 Docs</a> ·
         <a href="https://hub.docker.com/r/osrf/ros" target="_blank">OSRF Docker Hub</a> ·
         <a href="https://navigation.ros.org/" target="_blank">Nav2 Docs</a> ·
@@ -1724,7 +1729,7 @@
     // ============================================================
     // STEP NAVIGATION
     // ============================================================
-    function showStep(n) {
+    function showStep(n, scroll = false) {
       document.querySelectorAll('.builder').forEach(b => b.classList.remove('active'));
       document.getElementById('step-' + n).classList.add('active');
 
@@ -1737,7 +1742,11 @@
       document.querySelectorAll('.step-dot.done .num').forEach(el => el.textContent = '');
 
       state.currentStep = n;
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      if (scroll) {
+        document.getElementById('steps-nav').scrollIntoView({ behavior: 'smooth' });
+      }
+
       if (n === 5) { generateFiles(); updateSummary(); }
 
       // Update exec command
@@ -1853,7 +1862,7 @@
       if (state.tools.has('x11')) pills.push({ label: 'X11 GUI', cls: '' });
 
       el.innerHTML = pills.map(p => `<span class="pill ${p.cls}">${p.label}</span>`).join('') +
-        `<span class="pill green" style="margin-left:auto; border-style:dashed;" title="This combination of tools and packages is automatically validated by our CI suite.">✓ CI Verified Pattern</span>`;
+        `<span class="pill green" style="margin-left:auto; border-style:dashed;" title="This combination of tools and packages has been validated by our CI suite.">✓ CI Verified Pattern</span>`;
     }
 
     // ============================================================
