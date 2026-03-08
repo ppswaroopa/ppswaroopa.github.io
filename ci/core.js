@@ -11,6 +11,10 @@ const ROS2_GENERATOR_CORE = {
         if (variant === 'ros-base' || variant === 'ros-core') {
             return `ros:${distro}-${variant}`;
         }
+        // desktop-full is not an official OSRF image tag, fallback to desktop
+        if (variant === 'desktop-full') {
+            return `osrf/ros:${distro}-desktop`;
+        }
         return `osrf/ros:${distro}-${variant}`;
     },
 
@@ -98,6 +102,15 @@ const ROS2_GENERATOR_CORE = {
         lines.push(`ENV DEBIAN_FRONTEND=noninteractive`);
         lines.push(`SHELL ["/bin/bash", "-c"]`);
         lines.push('');
+
+        // Handle desktop-full for non-CUDA images (osrf/ros only provides desktop)
+        if (!hasCuda && variant === 'desktop-full') {
+            lines.push(`# ── Upgrade to desktop-full ──────────────────────────────────`);
+            lines.push(`RUN apt-get update && apt-get install -y \\`);
+            lines.push(`    ros-${distro}-desktop-full && \\`);
+            lines.push(`    rm -rf /var/lib/apt/lists/*`);
+            lines.push('');
+        }
 
         // Locale
         if (tools.has('locale')) {

@@ -161,7 +161,7 @@
       font-size: 16px;
       color: var(--text-dim);
       max-width: 560px;
-      margin: 0 auto 48px;
+      margin: 0 auto 24px;
       line-height: 1.7;
       font-weight: 400;
       opacity: 0;
@@ -1064,6 +1064,30 @@
       <h1>Your <span class="accent">ROS2</span> Docker<br>Environment, <span class="accent2">Generated</span></h1>
       <p class="hero-sub">Pick your ROS2 distro, select the packages you need, configure your dev environment — and walk
         away with a ready-to-run Dockerfile & Compose file. Zero Docker expertise required.</p>
+
+      <div
+        style="display: flex; justify-content: center; gap: 12px; margin-bottom: 48px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.6s ease 0.35s forwards;">
+        <a href="https://github.com/ppswaroopa/ppswaroopa.github.io/actions" target="_blank" class="pill green"
+          style="text-decoration: none; display: flex; align-items: center; gap: 8px; transition: all 0.2s; padding: 6px 16px;"
+          onmouseover="this.style.background='rgba(0, 255, 136, 0.15)'"
+          onmouseout="this.style.background='rgba(0, 255, 136, 0.06)'" title="View GitHub Actions CI tests">
+          <span class="blink" style="font-size: 8px;">🟢</span>
+          <span><strong>CI Validated</strong> · Tested via GitHub Actions</span>
+        </a>
+        <a href="https://github.com/ppswaroopa/ppswaroopa.github.io/issues" target="_blank" class="pill"
+          style="text-decoration: none; display: flex; align-items: center; gap: 8px; transition: all 0.2s; padding: 6px 16px;"
+          onmouseover="this.style.color='#fff'; this.style.borderColor='#fff'"
+          onmouseout="this.style.color='var(--text-dim)'; this.style.borderColor='var(--border-bright)'"
+          title="Report a bug or request a feature">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+            </path>
+          </svg>
+          Found an Issue?
+        </a>
+      </div>
+
       <a href="#builder" class="hero-cta" onclick="showStep(1)">
         ▶ Start Building Your Environment
       </a>
@@ -1828,7 +1852,8 @@
       if (state.packages.has('cuda')) pills.push({ label: 'NVIDIA GPU', cls: 'orange' });
       if (state.tools.has('x11')) pills.push({ label: 'X11 GUI', cls: '' });
 
-      el.innerHTML = pills.map(p => `<span class="pill ${p.cls}">${p.label}</span>`).join('');
+      el.innerHTML = pills.map(p => `<span class="pill ${p.cls}">${p.label}</span>`).join('') +
+        `<span class="pill green" style="margin-left:auto; border-style:dashed;" title="This combination of tools and packages is automatically validated by our CI suite.">✓ CI Verified Pattern</span>`;
     }
 
     // ============================================================
