@@ -1,6 +1,22 @@
+:root {
+    --heading-font: 'Plus Jakarta Sans', sans-serif;
+    --body-font: 'Inter', sans-serif;
+    --body-line-height: 1.65;
+    --heading-weight: 600;
+    --body-weight: 300;
+    --body-tracking: 0.01em;
+    --heading-tracking: 0.04em;
+    --list-spacing: 8px;
+    --table-cell-padding: 6px 4px;
+}
+
+b, strong {
+    font-weight: 600;
+}
+
 html {
-    font-family: sans-serif;
-    line-height: 1;
+    font-family: var(--body-font, sans-serif);
+    line-height: var(--body-line-height, 1.65);
     height: 100%;
     scroll-behavior: smooth;
 }
@@ -18,8 +34,18 @@ body {
     background-color: #000;
     margin: 0;
     padding: 0;
-    font-family: 'Myriad Pro', sans-serif;
+    font-family: var(--body-font, 'Inter', sans-serif);
+    font-weight: var(--body-weight, 300);
+    line-height: var(--body-line-height, 1.65);
+    letter-spacing: var(--body-tracking, 0.01em);
     overflow: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font, 'Inter', sans-serif);
+    font-weight: var(--heading-weight, 600);
 }
 
 /* Styles for burger menu icon */
@@ -51,6 +77,8 @@ body {
 .navbar a {
     color: white;
     text-decoration: none;
+    font-family: var(--body-font, 'Inter', sans-serif);
+    font-weight: 500;
     padding: 10px 20px;
     margin: 5px 0; /* Add some vertical spacing between links */
 }
@@ -76,11 +104,20 @@ body {
 }
 #name {
     color: #f0f0f0;
-    font-family: 'Myriad Pro', sans-serif;
+    font-family: var(--heading-font, 'Inter', sans-serif);
+    font-weight: var(--heading-weight, 600);
+    letter-spacing: -0.01em;
     text-align: center;
-    font-size: 24px;
-    padding-top: 5%;
-    padding-bottom: 3%;
+    font-size: 26px;
+    padding-top: 4%;
+    padding-bottom: 2%;
+}
+
+.name {
+    font-family: var(--body-font, 'Inter', sans-serif);
+    font-weight: var(--body-weight, 400);
+    line-height: var(--body-line-height, 1.6);
+    color: #e5e7eb;
 }
 
 #profile-image {
@@ -103,18 +140,22 @@ body {
 .info {
     display: inline-block;
     background-color: #ddff8f;
-    border-radius: 60px;
-    padding-left: 3%;
-    padding-right: 3%;
-    padding-top: 2%;
-    padding-bottom: 1%;
-    width: 40%;
-    font-size: 18px;
-    font-family: 'Myriad Pro', sans-serif;
-    line-height: 24px;
+    border-radius: 40px;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    width: 42%;
+    font-size: 16px;
+    font-family: var(--body-font, 'Inter', sans-serif);
+    font-weight: var(--body-weight, 300);
+    line-height: var(--body-line-height, 1.6);
+    color: #1a1a1a;
 }
 .study {
-    text-align: justify;
+    text-align: left;
+    line-height: var(--body-line-height, 1.6);
+    margin-bottom: 14px;
 }
 .info img {
     width: 15%;
@@ -122,51 +163,78 @@ body {
 }
 #about {
     text-transform: uppercase;
+    font-family: var(--heading-font, 'Inter', sans-serif);
+    font-weight: var(--heading-weight, 600);
+    letter-spacing: var(--heading-tracking, 0.05em);
+    margin-top: 5px;
+    margin-bottom: 12px;
 }
 #clemson {
     color: #F56600;
 }
 
 .edu-det {
-    padding-left: 10%;
+    padding-left: 6%;
     text-align: left;
     vertical-align: top;
 }
 
 .info table {
     width: 100%;
+    border-collapse: collapse;
 }
+
+.info table td {
+    padding: var(--table-cell-padding, 6px 4px);
+    line-height: var(--body-line-height, 1.55);
+    vertical-align: top;
+}
+
+.info table tr td:first-child {
+    font-weight: 500;
+    color: #2b3a0e;
+    white-space: nowrap;
+    padding-right: 14px;
+}
+
 hr {
-    border: 2px solid #000;
+    border: none;
+    border-top: 1.5px solid rgba(0, 0, 0, 0.15);
+    margin: 14px 0;
 }
 button {
     padding: 12px 24px;
     background-color: #000;
     color: #fff;
     border: none;
-    border-radius: 4px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 15px;
     cursor: pointer;
     width: 50%;
+    font-family: var(--body-font, 'Inter', sans-serif);
     font-weight: 600;
+    letter-spacing: 0.02em;
     transition: all 0.3s ease;
 }
   
 button:hover {
-    background-color: #494343;
+    background-color: #333;
 }
 #resume-button {
     text-align: center;
     padding: 2%;
+    margin-top: 10px;
 }
 
 .experience {
     color: #f0f0f0;
     text-align: center;
-    font-weight: 100;
-    padding-top: 2%;
+    font-family: var(--heading-font, 'Inter', sans-serif);
+    font-weight: var(--heading-weight, 600);
+    letter-spacing: var(--heading-tracking, 0.06em);
+    padding-top: 3%;
     padding-bottom: 2%;
-    text-transform:uppercase;
+    text-transform: uppercase;
 }
 .design-section {
   display: flex;
@@ -192,15 +260,44 @@ button:hover {
   background: #1f1f1f;
   -webkit-box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
           box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
-  border-radius: 5px;
-  color: white;
+  border-radius: 8px;
+  color: #e5e7eb;
   padding: 1.75rem;
   transition: 0.4s ease;
   overflow-wrap: break-word !important;
   margin: 1rem;
   margin-bottom: 20px;
-  border-radius: 6px;
-  font-size: 18px;
+  font-size: 15px;
+  font-family: var(--body-font, 'Inter', sans-serif);
+  font-weight: var(--body-weight, 300);
+  line-height: var(--body-line-height, 1.65);
+}
+
+.timeline-content h3 {
+  font-family: var(--heading-font, 'Inter', sans-serif);
+  font-weight: var(--heading-weight, 600);
+  font-size: 19px;
+  margin-top: 4px;
+  margin-bottom: 6px;
+  color: #ffffff;
+}
+
+.timeline-content h4 {
+  font-family: var(--heading-font, 'Inter', sans-serif);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 14px;
+}
+
+.timeline-content ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 4px;
+}
+
+.timeline-content ul li {
+  margin-bottom: var(--list-spacing, 8px);
+  line-height: var(--body-line-height, 1.65);
 }
 
 .timeline-component {
@@ -210,9 +307,11 @@ button:hover {
 #project {
     text-align: center;
     color: #f0f0f0;
-    padding-top: 2%;
-    font-weight: 100;
-    text-transform:uppercase;
+    padding-top: 3%;
+    font-family: var(--heading-font, 'Inter', sans-serif);
+    font-weight: var(--heading-weight, 600);
+    letter-spacing: var(--heading-tracking, 0.06em);
+    text-transform: uppercase;
 }
 #second-slide {
     color: #f0f0f0;
@@ -239,7 +338,11 @@ button:hover {
 .project h3 {
     color: #f0f0f0;
     text-align: center;
-    font-weight: 100;
+    font-family: var(--heading-font, 'Inter', sans-serif);
+    font-weight: var(--heading-weight, 600);
+    letter-spacing: 0.02em;
+    font-size: 17px;
+    margin-top: 10px;
 }
 .project a {
     text-decoration: none;
@@ -288,12 +391,20 @@ button:hover {
 }
 .project-details-right {
     width: 50%;
-    text-align: r;
-    font-size: 18px;
+    text-align: left;
+    font-size: 16px;
+    font-family: var(--body-font, 'Inter', sans-serif);
+    line-height: var(--body-line-height, 1.65);
+}
+
+.project-details-right h2, .project-details-right h3 {
+    font-family: var(--heading-font, 'Inter', sans-serif);
+    font-weight: var(--heading-weight, 600);
 }
 
 .project-details-right p {
-    text-align: justify;
+    text-align: left;
+    line-height: var(--body-line-height, 1.65);
 }
 
 footer {
