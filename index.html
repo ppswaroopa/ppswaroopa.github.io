@@ -38,85 +38,75 @@
             <div id="name">I am Pranava Swaroopa</div>
             <img id="profile-image" src="src/images/Profile_Image.png" alt="Photo of Pranava Swaroopa">
             <!-- <div class="name">I develop robots that can see, think, and act</div> -->
-            <div id="external-links">
-                <a href="https://github.com/ppswaroopa" target="_blank" class="logo">
-                    <i class="fa-brands fa-github fa-3x"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/pranavaswaroopa" target="_blank" class="logo">
-                    <i class="fa-brands fa-linkedin fa-3x"></i>
-                </a>
+            <div class="profile-actions">
+                <div id="external-links">
+                    <a href="https://github.com/ppswaroopa" target="_blank" class="logo" title="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pranavaswaroopa" target="_blank" class="logo" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+                <div id="resume-button">
+                    <a href="src/documents/Pranava_Swaroopa.pdf" download>
+                        <button><i class="fa-solid fa-file-arrow-down"></i> <span>Resume</span></button>
+                    </a>
+                </div>
             </div>
         </div>
 
         <div class="info">
-            <h2 id="about">About me</h2><img src="src/images/Paw_RGB__Orange.png" />
+            <div class="info-header">
+                <h2 id="about">About me</h2>
+                <img src="src/images/Paw_RGB__Orange.png" alt="Clemson Paw Logo" class="clemson-paw"/>
+            </div>
             <p class="study">M.S. in Automotive Engineering from
-                <b><span id="clemson">Clemson Univerisity</span> International Center for Automotive Research</b> <br>
-                <!-- Graduated in August 2023. -->
+                <b><span id="clemson">Clemson University</span> International Center for Automotive Research</b>
             </p>
-            <!-- <p>
-                Currently, working for Relay Robotics as a Field Engineer in Seattle, WA.
-
-            </p> -->
 
             <hr>
             <h3>Education</h3>
-            <table>
+            <table class="edu-table">
                 <tr>
-                    <td>2021 - 2023</td>
+                    <td class="edu-year">2021 - 2023</td>
                     <td>
-                        <div class="edu-det"><b>Master of Science in Automotive Engineering</b></div>
+                        <div class="edu-title">Master of Science in Automotive Engineering</div>
+                        <div class="edu-inst">Clemson University - ICAR, US</div>
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td class="edu-year">2013 - 2017</td>
                     <td>
-                        <div class="edu-det">Clemson Univerisity - ICAR</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2013 - 2017</td>
-                    <td>
-                        <div class="edu-det"><b>Bachelors of Technology in Mechanical Engineering</b></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <div class="edu-det">Manipal Institute of Technology, India</div>
+                        <div class="edu-title">Bachelors of Technology in Mechanical Engineering</div>
+                        <div class="edu-inst">Manipal Institute of Technology, India</div>
                     </td>
                 </tr>
             </table>
             <hr>
 
             <h3>Technical Skills</h3>
-            <table>
+            <table class="skills-table">
                 <tr>
-                    <td>Languages</td>
-                    <td>C/C++, Python, JavaScript, MATLAB, Bash</td>
+                    <td class="skill-category">Languages</td>
+                    <td class="skill-list">C/C++, Python, JavaScript, MATLAB, Bash</td>
                 </tr>
                 <tr>
-                    <td>Tools</td>
-                    <td>Git, ROS/ROS2, Docker, Azure DevOps, systemd, MQTT, Visual Studio</td>
+                    <td class="skill-category">Tools</td>
+                    <td class="skill-list">Git, ROS/ROS2, Docker, Azure DevOps, systemd, MQTT, Visual Studio</td>
                 </tr>
                 <tr>
-                    <td>Simulation Env</td>
-                    <td>Gazebo, LG-SVL, CoppeliaSim, Project Chrono</td>
+                    <td class="skill-category">Simulation</td>
+                    <td class="skill-list">Gazebo, LG-SVL, CoppeliaSim, Project Chrono</td>
                 </tr>
                 <tr>
-                    <td>Design Software</td>
-                    <td>SolidWorks, Siemens NX, AutoCAD, CATIA V5</td>
+                    <td class="skill-category">Design Software</td>
+                    <td class="skill-list">SolidWorks, Siemens NX, AutoCAD, CATIA V5</td>
                 </tr>
                 <tr>
-                    <td>Operating System</td>
-                    <td>Ubuntu, Windows, Raspberry Pi, STM32 (Embedded)</td>
+                    <td class="skill-category">Operating System</td>
+                    <td class="skill-list">Ubuntu, Windows, Raspberry Pi, STM32 (Embedded)</td>
                 </tr>
             </table>
-            <div id="resume-button">
-                <a href="src/documents/Pranava_Swaroopa.pdf" download>
-                    <button>Download Resume</button>
-                </a>
-            </div>
         </div>
     </div>
     <div id="experience">
